@@ -1,0 +1,53 @@
+.nav {
+    background: $site-primary;
+    color: $font-color-primary;
+
+    @include e('list') {
+        padding: 0;
+    }
+
+    @include e('item') {
+        list-style: none;
+        @include mq('sm') {
+            margin: pem(16);
+        }
+        list-style: none;
+        margin: pem(32);
+    }
+
+    @include e('dashboard') {
+        @include mq('sm') {
+            width: auto;
+            height: pem(20);
+        }
+        width: auto;
+        height: pem(35);
+    }
+
+    @include e('members') {
+        @include mq('sm') {
+            width: auto;
+            height: pem(20);
+        }
+        width: auto;
+        height: pem(35);
+    }
+
+    @include e('visits') {
+        @include mq('sm') {
+            width: auto;
+            height: pem(20);
+        }
+        width: auto;
+        height: pem(35);
+    }
+
+    @include e('settings') {
+        @include mq('sm') {
+            width: auto;
+            height: pem(20);
+        }
+        width: auto;
+        height: pem(35);
+    }
+}

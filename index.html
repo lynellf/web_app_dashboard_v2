@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Step One (d): Ensure the design responds well to mobile (320px) tablet (768) and desktop (1024) screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <title>Web App Dashboard</title>
+    
+</head>
+<body class="dashboard">
+    <!-- Step One (a): Create a header with app name, notification icon badge and profile avatar and name -->
+    <header class="header">
+        <h3 class="header__title">App Title</h3>
+        <div class="header__user">
+            <div class="header__notification-div">
+                <!-- Step Two (b): Include a notification icon in the navigation header. Use the icon-bell.svg file. This icon shall be located in the top right corner of the page-->
+                <img src="icons/icon-bell.svg" alt="notification bell" class="header__notifications">
+            </div>
+            <div class="header__user-info-div">
+                <img src="img/profile.jpg" alt="profile picture" class="header__profile-img">
+                <span class="header__name">Ezell Frazier</span>
+            </div>
+        </div>
+    </header>
+    <!-- Step One (b): Implement SVG icon based navigation with the following links: Dashboard, Members, Visits, and Settings.
+    Note: You only have to build out the main dashboard page, not any of the other pages -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <img src="icons/icon-dashboard.svg" alt="dashboard icon" class="nav__dashboard">
+            </li>
+            <li class="nav__item">
+                <img src="icons/icon-members.svg" alt="members icon" class="nav__members">
+            </li>
+            <li class="nav__item">
+                <img src="icons/icon-visits.svg" alt="visits icon" class="nav__visits">
+            </li>
+            <li class="nav__item">
+                <img src="icons/icon-settings.svg" alt="settings icon" class="nav__settings">
+            </li>
+        </ul>
+    </nav>
+    <!-- Step One (c): Main content area where the specific dashboard widgets will go. -->
+    <main class="main">
+        <!-- Step Two (a): Alert bar should be visible at the top but able to be closed when clicking the X button -->
+    </main>
+        
+    <!-- Step Three -->
+        <!-- Step Three (a): Using chart.js, create and include the information for the following chart widgets,
+        as shown in the mockup for the: 1. Web traffic (line chart) 2. Daily Traffic Bar Chart (bar chart)
+        3. Mobile User Pie Chart (donut chart) -->
+        <!-- Step Three (b): Style the charts to match the overall style of the dashboard. -->
+        <!-- Step Three (c): You will need to make up this data - you can see the mockup for sample data -->
+    <!-- Step Three -->
+
+    <!-- Step Four -->
+        <!-- Step Four (a): Create a widget (or three separate widgets) to display social network stats for Facebook,
+        Twitter, and Google+ -->
+        <!-- Step Four (b): Use the provided SVG icons for each of the social networks -->
+        <!-- Step Four (c): Style the social information to match the corresponding social network -->
+        <!-- Step Four (d): Style to match the overall look and feel of the dashboard -->
+    <!-- Step Four -->
+
+    <!-- Step Five -->
+        <!-- Step Five (a): Create a field for searching for a user -->
+        <!-- Step Five (b): Make up some user data for the search field -->
+        <!-- Step Five (c): Add a message textarea field which lets us add a message -->
+        <!-- Step Five (d): Create a "Send" button and use JS to allow you to submit the form and display
+        a confirmation the message was sent. You won't actually submit the form, just simulate the action using
+        JavaScript -->
+        <!-- Step Five (e): Use JS to display error messages if a user isn't selected or the message field is empty -->
+        <!-- Step Five (f): Style to match the overall look and feel of the dashboard. -->
+    <!-- Step Five -->
+
+    <!-- Step Six -->
+        <!-- Step Six (a): Create a settings widget to display various setting options using different form elements -->
+        <!-- Step Six (b): Create an on/off widget for whether to send email notifications -->
+        <!-- Step Six (c): Create an on/off widget for whether to set profile to public or private -->
+        <!-- Step Six (d): Create a dropdown to select timezone -->
+        <!-- Step Six (e): Add Save and Cancel buttons (these do not have to do anything functional) -->
+        <!-- Step Six (f): Style to match the overall look and feel of the dashboard -->
+    <!-- Step Six -->
+
+    <!-- Extra Credit -->
+        <!-- Display at least two notifications when the user clicks the alerts icon (pop-up or drop-down) -->
+        <!-- Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a
+        different line chart is displayed on click. -->
+        <!-- Add an "autocomplete" feature for the "Search for User" box, listing names that match the searh
+        term -->
+    <!-- Extra Credit -->
+
+
+
+
+</body>
+</html>

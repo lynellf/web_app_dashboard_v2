@@ -1,0 +1,74 @@
+.header {
+    background: $site-secondary;
+    display: flex;
+    justify-content: space-between;
+    color: $font-color-primary;
+
+    @include e('title') {
+        @include mq('sm') {
+            padding-left: pem(8);
+            font-size: pem(14);
+        }
+
+        @include mq('med') {
+            padding-left: pem(16);
+        }
+    }
+
+    @include e('user') {
+        display: flex;
+        @include mq('sm') {
+            margin: pem(14) pem(8);
+            font-size: pem(14);
+        }
+
+        @include mq('med') {
+            margin: pem(14) pem(8);
+            font-size: pem(15);
+        }
+    }
+
+    @include e('notification-div') {
+        border-right: pem(1) solid $site-primary;
+        padding-right: pem(16);
+        display: flex;
+    }
+
+    @include e('notifications') {
+        margin: auto;
+        @include mq('sm') {
+            width: auto;
+            height: pem(18);
+        }
+        @include mq('med') {
+            width: auto;
+            height: pem(20);
+        }
+        
+    }
+
+    @include e('user-info-div') {
+        display: flex;
+        padding-left: pem(16);
+    }
+
+    @include e('profile-img') {
+        border-radius: 50%;
+        margin: auto;
+        @include mq('sm') {
+            padding: 0 pem(8);
+            width: auto;
+            height: pem(25);
+        }
+
+        @include mq('med') {
+            padding: 0 pem(8);
+            width: auto;
+            height: pem(30);
+        }
+    }
+
+    @include e('name') {
+        margin: auto;
+    }
+}

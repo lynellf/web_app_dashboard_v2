@@ -1,0 +1,41 @@
+//====================================================
+// Colors 
+//====================================================
+$mulled-wine: #4D4B72;
+$ship-cove: #7477BF;
+$link-water: #E2E3F6;
+$de-york: #81C98F;
+$glacier: #74B1BF;
+$silver-chalice: #B2B2B2;
+$alabaster: #FBFBFB;
+
+$site-primary: $mulled-wine;
+$site-secondary: $ship-cove;
+
+$font-color-primary: $alabaster;
+
+//====================================================
+// Font
+//====================================================
+// $font-url: ('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$font-stack-primary: 'Open Sans',
+sans-serif;
+
+//====================================================
+// Functions 
+//====================================================
+// Converts pixels to ems
+@function pem($pixels) {
+    @return($pixels/16 *1em);
+}
+
+// Load imported fonts
+// @if variable-exists(font-url) {
+//     @import url($font-url);
+// }
+
+//=====================================================
+//Breakpoints
+//=====================================================
+$breaks: ( 'sm': 767px, 'med': 768px, 'lg': 1024px);
