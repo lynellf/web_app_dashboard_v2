@@ -1,0 +1,19 @@
+.icon {
+    @include m('close') {
+        &::after {
+            content: attr(icon);
+            font-weight: 800;
+            color: white;
+            justify-self: flex-end;
+        }
+    }
+
+    @include m('search') {
+        position: relative;
+        top: 10px;
+        left: 195px;
+        color: black;
+        height: 15px;
+        fill: black;
+    }
+}

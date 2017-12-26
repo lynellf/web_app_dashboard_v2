@@ -5,6 +5,7 @@
     <!-- Step One (d): Ensure the design responds well to mobile (320px) tablet (768) and desktop (1024) screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font-awesome.css">
     <link rel="stylesheet" href="styles/css/styles.css">
     <title>Web App Dashboard</title>
     
@@ -44,13 +45,34 @@
     </nav>
     <!-- Step One (c): Main content area where the specific dashboard widgets will go. -->
     <main class="main">
+        <div class="dashboard__header">
+            <div class="dashboard__title">
+                <span>Dashboard</span>
+            </div>
+            <div class="dashboard__search">
+                <span><img src="icons/icon-search.svg" alt="Search" class="icon--search"></span>
+                <input type="text" class="dashboard__searchbar" placeholder="search">
+            </div>
+        </div>
         <!-- Step Two (a): Alert bar should be visible at the top but able to be closed when clicking the X button -->
-    </main>
-        
-    <!-- Step Three -->
+        <div class="dashboard__alert">
+            <div class="dashboard__alet-content">
+                    <strong>Alert</strong>
+                    <span class="dashboard__alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. </span>
+            </div>
+            <span class="icon--close" icon="x"></span>
+        </div>
         <!-- Step Three (a): Using chart.js, create and include the information for the following chart widgets,
         as shown in the mockup for the: 1. Web traffic (line chart) 2. Daily Traffic Bar Chart (bar chart)
         3. Mobile User Pie Chart (donut chart) -->
+
+        <div class="traffic">
+            <canvas id="traffic" width="400" height="400"></canvas>
+        </div>
+    </main>
+        
+    <!-- Step Three -->
+        
         <!-- Step Three (b): Style the charts to match the overall style of the dashboard. -->
         <!-- Step Three (c): You will need to make up this data - you can see the mockup for sample data -->
     <!-- Step Three -->
@@ -95,4 +117,6 @@
 
 
 </body>
+<script src="js/chart.js"></script>
+<script src="js/main.js"></script>
 </html>

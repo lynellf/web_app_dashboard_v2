@@ -1,0 +1,38 @@
+.dashboard {
+    @include e('header') {
+        display: flex;
+        // justify-content: space-between;
+        background: $link-water;
+    }
+
+    @include e('title') {
+        background: $site-tertiary;
+        padding: pem(16);
+    }
+
+    @include e('search') {
+        display: flex;
+        justify-content: flex-end;
+        padding: pem(16);
+        border-bottom: pem(1) solid $site-primary;
+        border-left: pem(1) solid $site-primary;
+        width: 95%;
+    }
+
+    @include e('searchbar') {
+        padding: pem(6);
+    }
+    @include e('alert') {
+        display: flex;
+        justify-content: space-between;
+        background: $site-secondary;
+        color: $font-color-primary;
+        border-radius: pem(6);
+        margin: pem(16);
+        padding: pem(16);
+
+        span {
+            margin: 0 pem(8);
+        }
+    }
+}
