@@ -162,19 +162,38 @@
   height: 15px;
   fill: black; }
 
-canvas {
-  max-height: auto !important;
-  width: 100% !important; }
-
 .traffic {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "main main" "daily mobile";
   padding: 1.25em;
-  max-height: 50%; }
+  height: 50%; }
   .traffic__main {
     grid-area: main; }
+  .traffic__menu {
+    display: flex;
+    justify-content: space-between; }
+  .traffic__config {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0; }
+  .traffic__option {
+    font-weight: 600;
+    padding: 0.5em; }
+    .traffic__option:nth-child(2) {
+      margin: 0 1em; }
+    .traffic__option--active {
+      font-weight: 600;
+      background: #77B988;
+      padding: 0.5em;
+      border-radius: 24px;
+      color: white; }
+      .traffic__option--active:nth-child(2) {
+        margin: 0 1em; }
+      .traffic__option--active:nth-child(3) {
+        margin: 0 1em; }
   .traffic__daily {
     grid-area: daily;
     border: thin solid black;
