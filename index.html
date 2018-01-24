@@ -67,7 +67,18 @@
         3. Mobile User Pie Chart (donut chart) -->
 
         <div class="traffic">
-            <canvas id="traffic" width="400" height="400"></canvas>
+            <div class="traffic__main">
+                <h3 class="traffic__title">Traffic</h3>
+                <canvas id="trafficLine"></canvas>
+            </div>
+            <div class="traffic__daily">
+                <h3 class="traffic__title">Daily Traffic</h3>
+                <canvas id="trafficBar"></canvas>
+            </div>
+            <div class="traffic__mobile">
+                <h3 class="traffic__title">Mobile Traffic</h3>
+                <canvas id="trafficPie"></canvas>
+            </div>
         </div>
     </main>
         

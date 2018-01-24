@@ -1,0 +1,37 @@
+canvas {
+    max-height: auto !important;
+    width: 100% !important;
+}
+
+.traffic {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "main main"
+    "daily mobile";
+    padding: pem(20);
+    max-height: 50%;
+
+    @include e('main') {
+        grid-area: main;
+    }
+
+    @include e('daily') {
+        grid-area: daily;
+        border: thin solid black;
+        border-bottom: none;
+        border-left: none;
+        border-bottom: thin solid black;
+        border-right: none;
+        padding: pem(20);
+    }
+    @include e('mobile') {
+        grid-area: mobile;
+        border: thin solid black;
+        border-bottom: none;
+        border-right: none;
+        border-bottom: thin solid black;
+        padding: 0 pem(20);
+    }
+}
