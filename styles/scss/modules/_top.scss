@@ -1,4 +1,5 @@
-.dashboard {
+.top {
+    grid-area: top;
     @include e('header') {
         display: flex;
         // justify-content: space-between;

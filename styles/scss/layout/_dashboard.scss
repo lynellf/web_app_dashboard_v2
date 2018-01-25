@@ -28,4 +28,7 @@
 
 .main {
     grid-area: main;
+    display: grid;
+    grid-template-rows: 115px 1fr 1fr;
+    grid-template-areas: "top" "traffic" "social";
 }

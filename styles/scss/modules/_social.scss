@@ -1,0 +1,28 @@
+.social {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+
+    @include e('widgets') {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include e('site') {
+        display: flex;
+        justify-content: space-around;
+        padding: pem(20);
+    }
+
+    @include e('icon') {
+        fill: white;
+        margin-top: pem(4);
+    }
+
+    @include e('span') {
+        padding: pem(15);
+        background: $mulled-wine;
+        border-radius: 50%;
+    }
+}

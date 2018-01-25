@@ -25,7 +25,10 @@
   grid-area: nav; }
 
 .main {
-  grid-area: main; }
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 115px 1fr 1fr;
+  grid-template-areas: "top" "traffic" "social"; }
 
 .header {
   background: #7477BF;
@@ -123,31 +126,33 @@
         width: auto;
         height: 1.25em; } }
 
-.dashboard__header {
-  display: flex;
-  background: #E2E3F6; }
-.dashboard__title {
-  background: #FBFBFB;
-  padding: 1em; }
-.dashboard__search {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1em;
-  border-bottom: 0.0625em solid #4D4B72;
-  border-left: 0.0625em solid #4D4B72;
-  width: 95%; }
-.dashboard__searchbar {
-  padding: 0.375em; }
-.dashboard__alert {
-  display: flex;
-  justify-content: space-between;
-  background: #7477BF;
-  color: #FBFBFB;
-  border-radius: 0.375em;
-  margin: 1em;
-  padding: 1em; }
-  .dashboard__alert span {
-    margin: 0 0.5em; }
+.top {
+  grid-area: top; }
+  .top__header {
+    display: flex;
+    background: #E2E3F6; }
+  .top__title {
+    background: #FBFBFB;
+    padding: 1em; }
+  .top__search {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    border-bottom: 0.0625em solid #4D4B72;
+    border-left: 0.0625em solid #4D4B72;
+    width: 95%; }
+  .top__searchbar {
+    padding: 0.375em; }
+  .top__alert {
+    display: flex;
+    justify-content: space-between;
+    background: #7477BF;
+    color: #FBFBFB;
+    border-radius: 0.375em;
+    margin: 1em;
+    padding: 1em; }
+    .top__alert span {
+      margin: 0 0.5em; }
 
 .icon--close::after {
   content: attr(icon);
@@ -163,8 +168,8 @@
   fill: black; }
 
 .traffic {
+  grid-area: traffic;
   display: grid;
-  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "main main" "daily mobile";
   padding: 1.25em;
@@ -209,5 +214,25 @@
     border-right: none;
     border-bottom: thin solid black;
     padding: 0 1.25em; }
+
+.social {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  height: 50%; }
+  .social__widgets {
+    display: flex;
+    justify-content: space-around; }
+  .social__site {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.25em; }
+  .social__icon {
+    fill: white;
+    margin-top: 0.25em; }
+  .social__span {
+    padding: 0.9375em;
+    background: #4D4B72;
+    border-radius: 50%; }
 
 /*# sourceMappingURL=styles.css.map */
