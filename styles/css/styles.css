@@ -27,8 +27,8 @@
 .main {
   grid-area: main;
   display: grid;
-  grid-template-rows: 115px 1fr 1fr;
-  grid-template-areas: "top" "traffic" "social"; }
+  grid-template-rows: 115px 1fr 0.25fr 1fr;
+  grid-template-areas: "top" "traffic" "social" "bottom"; }
 
 .header {
   background: #7477BF;
@@ -224,15 +224,73 @@
     display: flex;
     justify-content: space-around; }
   .social__site {
+    width: 30%;
     display: flex;
-    justify-content: space-around;
-    padding: 1.25em; }
-  .social__icon {
+    justify-content: flex-start;
+    padding: 1.25em;
+    background: #E2E3F6;
+    border: thin solid #7477BF; }
+  .social__container {
+    margin-left: 1em;
+    line-height: 0.5em; }
+  .social__header {
+    margin-top: 0.9375em;
+    color: #4D4B72; }
+  .social__counter {
+    font-weight: 0;
+    font-size: 2.1875em; }
+  .social__twitter {
     fill: white;
-    margin-top: 0.25em; }
+    margin-top: 0.125em; }
+  .social__facebook {
+    fill: white;
+    margin: -0.1875em 0; }
+  .social__google {
+    fill: white;
+    margin: -0.125em 0;
+    margin-left: 0.125em; }
   .social__span {
-    padding: 0.9375em;
+    display: block;
+    padding: 1.25em;
     background: #4D4B72;
-    border-radius: 50%; }
+    border-radius: 50%;
+    height: 75px; }
+
+.bottom {
+  display: grid;
+  grid-template-areas: "new recent" "message settings";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; }
+
+.members__new {
+  grid-area: 'new'; }
+.members__recent {
+  grid-area: recent; }
+.members__message {
+  grid-area: message; }
+.members__list {
+  list-style: none;
+  padding: 0;
+  margin-left: 0.5em; }
+.members__item {
+  display: flex;
+  margin-bottom: 1em; }
+.members__container {
+  display: flex; }
+.members__details {
+  display: flex;
+  flex-direction: column;
+  width: 75%; }
+.members__update {
+  display: flex;
+  flex-direction: column; }
+.members__avy {
+  border-radius: 50%;
+  margin-right: 0.5em; }
+.members__date {
+  align-self: flex-end; }
+
+.settings {
+  grid-area: settings; }
 
 /*# sourceMappingURL=styles.css.map */

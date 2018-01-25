@@ -1,0 +1,59 @@
+.bottom {
+    display: grid;
+    grid-template-areas: "new recent" "message settings";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.members {
+    @include e('new') {
+        grid-area: 'new';
+    }
+
+    @include e('recent') {
+        grid-area: recent;
+    }
+
+    @include e('message') {
+        grid-area: message;
+    }
+
+    @include e('list') {
+        list-style: none;
+        padding: 0;
+        margin-left: pem(8);
+    }
+
+    @include e('item') {
+        display: flex;
+        margin-bottom: pem(16);
+    }
+
+    @include e('container') {
+        display: flex;
+    }
+
+    @include e('details') {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+
+    @include e('update') {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include e('avy') {
+        border-radius: 50%;
+        margin-right: pem(8);
+    }
+
+    @include e('date') {
+        align-self: flex-end;
+    }
+}
+
+.settings {
+    grid-area: settings;
+}

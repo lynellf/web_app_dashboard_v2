@@ -48,26 +48,26 @@
     <!-- Step One (c): Main content area where the specific dashboard widgets will go. -->
     <main class="main">
         <div class="top">
-        <div class="top__header">
-            <div class="dashboard__title">
-                <span>Dashboard</span>
+            <div class="top__header">
+                <div class="top__title">
+                    <span>Dashboard</span>
+                </div>
+                <div class="top__search">
+                    <span>
+                        <img src="icons/icon-search.svg" alt="Search" class="icon--search">
+                    </span>
+                    <input type="text" class="top__searchbar" placeholder="search">
+                </div>
             </div>
-            <div class="top__search">
-                <span>
-                    <img src="icons/icon-search.svg" alt="Search" class="icon--search">
-                </span>
-                <input type="text" class="top__searchbar" placeholder="search">
+            <!-- Step Two (a): Alert bar should be visible at the top but able to be closed when clicking the X button -->
+            <div class="top__alert">
+                <div class="top__alet-content">
+                    <strong>Alert</strong>
+                    <span class="top__alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. </span>
+                </div>
+                <span class="icon--close" icon="x"></span>
             </div>
         </div>
-        <!-- Step Two (a): Alert bar should be visible at the top but able to be closed when clicking the X button -->
-        <div class="top__alert">
-            <div class="top__alet-content">
-                <strong>Alert</strong>
-                <span class="top__alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. </span>
-            </div>
-            <span class="icon--close" icon="x"></span>
-        </div>
-    </div>
         <!-- Step Three (a): Using chart.js, create and include the information for the following chart widgets,
         as shown in the mockup for the: 1. Web traffic (line chart) 2. Daily Traffic Bar Chart (bar chart)
         3. Mobile User Pie Chart (donut chart) -->
@@ -96,84 +96,227 @@
         </div>
 
 
-    <!-- Step Three -->
+        <!-- Step Three -->
 
-    <!-- Step Four -->
-    <!-- Step Four (a): Create a widget (or three separate widgets) to display social network stats for Facebook,
+        <!-- Step Four -->
+        <!-- Step Four (a): Create a widget (or three separate widgets) to display social network stats for Facebook,
         Twitter, and Google+ -->
-    <!-- Step Four (b): Use the provided SVG icons for each of the social networks -->
-    <!-- Step Four (c): Style the social information to match the corresponding social network -->
-    <!-- Step Four (d): Style to match the overall look and feel of the dashboard -->
-    <div class="social">
-        <h3 class="social__title">Social Stats</h3>
-        <div class="social__widgets">
-            <div class="social__site">
-                <span class="social__span">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 32 32"  class="social__icon"  width="50" height="50">
-                        <path d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"
-                        />
-                    </svg>
-                </span>
-                <div class="social__container">
-                    <h4 class="social__header">Twitter</h4>
-                    <span class="social__counter">10,345</span>
+        <!-- Step Four (b): Use the provided SVG icons for each of the social networks -->
+        <!-- Step Four (c): Style the social information to match the corresponding social network -->
+        <!-- Step Four (d): Style to match the overall look and feel of the dashboard -->
+        <div class="social">
+            <h3 class="social__title">Social Stats</h3>
+            <div class="social__widgets">
+                <div class="social__site">
+                    <span class="social__span">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="social__twitter" height="40">
+                            <path d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"
+                            />
+                        </svg>
+                    </span>
+                    <div class="social__container">
+                        <h4 class="social__header">Twitter</h4>
+                        <span class="social__counter">10,345</span>
+                    </div>
                 </div>
-            </div>
-            <div class="social__site">
-                <svg height="56.693" width="56.693" xmlns="http://www.w3.org/2000/svg" class="social__icon" preserveAspectRatio="none" width="100" height="100">
-                    <path d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"
-                    />
-                </svg>
-                <div class="social__container">
-                    <h4 class="social__header">Facebook</h4>
-                    <span class="social__counter">8,739</span>
+                <div class="social__site">
+                    <span class="social__span">
+                        <svg viewbox="0 0 56.693 56.693" xmlns="http://www.w3.org/2000/svg" class="social__facebook" height="40">
+                            <path d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"
+                            />
+                        </svg>
+                    </span>
+
+                    <div class="social__container">
+                        <h4 class="social__header">Facebook</h4>
+                        <span class="social__counter">8,739</span>
+                    </div>
                 </div>
-            </div>
-            <div class="social__site">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="social__icon" width="128" height="128">
-                    <path d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"
-                    />
-                </svg>
-                <div class="social__container">
-                    <h4 class="social__header">Google + </h4>
-                    <span class="social__counter">2,530</span>
+                <div class="social__site">
+                    <span class="social__span">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="social__google" height="40">
+                            <path d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"
+                            />
+                        </svg>
+                    </span>
+                    <div class="social__container">
+                        <h4 class="social__header">Google + </h4>
+                        <span class="social__counter">2,530</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Step Four -->
+        <!-- Step Four -->
 
-    <!-- Step Five -->
-    <!-- Step Five (a): Create a field for searching for a user -->
-    <!-- Step Five (b): Make up some user data for the search field -->
-    <!-- Step Five (c): Add a message textarea field which lets us add a message -->
-    <!-- Step Five (d): Create a "Send" button and use JS to allow you to submit the form and display
+        <!-- Step Five -->
+        <div class="bottom">
+            <div class="members__new">
+                <h3 class="bottom__title">New Members</h3>
+                <ul class="members__list">
+                    <li class="members__item">
+                        <img src="img/67.jpg" alt="iboya vat" class="members__avy" />
+                        <div class="members__details">
+                            <span class="members__name">Iboya Vat</span>
+                            <span class="members__email">iboya.vat@example.com</span>
+                        </div>
+                        <span class="members__date">10/15/17</span>
+                    </li>
+                    <li class="members__item">
+                        <img src="img/75.jpg" alt="aapo niskanen" class="members__avy" />
+                        <div class="members__details">
+                            <span class="members__name">Aapo Niskanen</span>
+                            <span class="members__email">aapo.niskanen@example.com</span>
+                        </div>
+                        <span class="members__date">10/15/17</span>
+                    </li>
+                    <li class="members__item">
+                        <img src="img/34.jpg" alt="phillip cox" class="members__avy" />
+                        <div class="members__details">
+                            <span class="members__name">Phillip Cox</span>
+                            <span class="members__email">victoria.chambers80@example.com</span>
+                        </div>
+                        <span class="members__date">10/15/17</span>
+                    </li>
+                    <li class="members__item">
+                        <img src="img/38.jpg" alt="zilda moreira" class="members__avy" />
+                        <div class="members__details">
+                            <span class="members__name">Zilda Moreira</span>
+                            <span class="members__email">zilda.moreira@example.com</span>
+                        </div>
+                        <span class="members__date">10/15/17</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="members__recent">
+                <h3 class="bottom__title">Recent Activity</h3>
+                <ul class="members__list">
+                    <li class="members__item">
+                        <img src="img/67.jpg" alt="iboya vat" class="members__avy" />
+                        <div class="members__update">
+                            <span class="members__name">Iboya Vat commented on YourApp's SEO Tips</span>
+                            <span class="members__aged">4 hours ago</span>
+                        </div>
+                    </li>
+                    <li class="members__item">
+                        <img src="img/75.jpg" alt="Aapo Niskanen" class="members__avy" />
+                        <div class="members__update">
+                            <span class="members__name">Aapo Niskanen liked the post Facebook's Changes for 2018</span>
+                            <span class="members__aged">4 hours ago</span>
+                        </div>
+                    </li>
+                    <li class="members__item">
+                        <img src="img/34.jpg" alt="Phillip Cox" class="members__avy" />
+                        <div class="members__update">
+                            <span class="members__name">Phillip Cox commented on Facebook's Changes for 2018</span>
+                            <span class="members__aged">4 hours ago</span>
+                        </div>
+                    </li>
+                    <li class="members__item">
+                        <img src="img/38.jpg" alt="Zilda Moreira" class="members__avy" />
+                        <div class="members__update">
+                            <span class="members__name">Zilda Moreira posted YourApp's SEO Tips</span>
+                            <span class="members__aged">4 hours ago</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="members__message">
+                <h3 class="bottom__title">Message User</h3>
+                <form>
+                    <input type="text" class="members__input" placeholder="Search for User" />
+                    <textarea class="members__textarea" placeholder="Message for User"></textarea>
+                    <input type="submit" class="members__submit" value="Send">
+                </form>
+            </div>
+            <div class="settings">
+                <h3 class="bottom__title">Settings</h3>
+                <ul class=settings__list>
+                    <li class="settings__item">
+                        <span class="settings__desc">Send Email Notifications</span>
+                        <label class="settings__switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li class="settings__item">
+                        <span class="settings__desc">Set Profile to Public</span>
+                        <label class="settings__switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                </ul>
+                <select name="DropDownTimezone" id="DropDownTimezone" class="settings__time">
+                    <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+                    <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+                    <option value="-10.0">(GMT -10:00) Hawaii</option>
+                    <option value="-9.0">(GMT -9:00) Alaska</option>
+                    <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                    <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                    <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                    <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                    <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                    <option value="-3.5">(GMT -3:30) Newfoundland</option>
+                    <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                    <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+                    <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                    <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                    <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                    <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+                    <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                    <option value="3.5">(GMT +3:30) Tehran</option>
+                    <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                    <option value="4.5">(GMT +4:30) Kabul</option>
+                    <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                    <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                    <option value="5.75">(GMT +5:45) Kathmandu</option>
+                    <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                    <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                    <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                    <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                    <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+                    <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                    <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                    <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                </select>
+                <div class="settings__btn-group">
+                    <button class="settings__save">Save</button>
+                    <button class="settings__save">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Step Five (a): Create a field for searching for a user -->
+        <!-- Step Five (b): Make up some user data for the search field -->
+        <!-- Step Five (c): Add a message textarea field which lets us add a message -->
+        <!-- Step Five (d): Create a "Send" button and use JS to allow you to submit the form and display
         a confirmation the message was sent. You won't actually submit the form, just simulate the action using
         JavaScript -->
-    <!-- Step Five (e): Use JS to display error messages if a user isn't selected or the message field is empty -->
-    <!-- Step Five (f): Style to match the overall look and feel of the dashboard. -->
-    <!-- Step Five -->
+        <!-- Step Five (e): Use JS to display error messages if a user isn't selected or the message field is empty -->
+        <!-- Step Five (f): Style to match the overall look and feel of the dashboard. -->
+        <!-- Step Five -->
 
-    <!-- Step Six -->
-    <!-- Step Six (a): Create a settings widget to display various setting options using different form elements -->
-    <!-- Step Six (b): Create an on/off widget for whether to send email notifications -->
-    <!-- Step Six (c): Create an on/off widget for whether to set profile to public or private -->
-    <!-- Step Six (d): Create a dropdown to select timezone -->
-    <!-- Step Six (e): Add Save and Cancel buttons (these do not have to do anything functional) -->
-    <!-- Step Six (f): Style to match the overall look and feel of the dashboard -->
-    <!-- Step Six -->
+        <!-- Step Six -->
+        <!-- Step Six (a): Create a settings widget to display various setting options using different form elements -->
+        <!-- Step Six (b): Create an on/off widget for whether to send email notifications -->
+        <!-- Step Six (c): Create an on/off widget for whether to set profile to public or private -->
+        <!-- Step Six (d): Create a dropdown to select timezone -->
+        <!-- Step Six (e): Add Save and Cancel buttons (these do not have to do anything functional) -->
+        <!-- Step Six (f): Style to match the overall look and feel of the dashboard -->
+        <!-- Step Six -->
 
-    <!-- Extra Credit -->
-    <!-- Display at least two notifications when the user clicks the alerts icon (pop-up or drop-down) -->
-    <!-- Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a
+        <!-- Extra Credit -->
+        <!-- Display at least two notifications when the user clicks the alerts icon (pop-up or drop-down) -->
+        <!-- Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a
         different line chart is displayed on click. -->
-    <!-- Add an "autocomplete" feature for the "Search for User" box, listing names that match the searh
+        <!-- Add an "autocomplete" feature for the "Search for User" box, listing names that match the searh
         term -->
-    <!-- Extra Credit -->
+        <!-- Extra Credit -->
 
 
 
-</main>
+    </main>
 </body>
 <script src="js/chart.js"></script>
 <script src="js/main.js"></script>
