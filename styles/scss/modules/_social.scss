@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     height: 50%;
+    margin-top: pem(-16);
+    margin-bottom: pem(44);
 
     @include e('widgets') {
         display: flex;
