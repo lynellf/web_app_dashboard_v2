@@ -259,22 +259,35 @@
 .bottom {
   display: grid;
   grid-template-areas: "new recent" "message settings";
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
   grid-template-columns: 1fr 1fr; }
 
 .members__new {
-  grid-area: 'new'; }
+  border-top: thin solid #7477BF;
+  border-bottom: thin solid #7477BF;
+  grid-area: new; }
 .members__recent {
+  border-top: thin solid #7477BF;
+  border-bottom: thin solid #7477BF;
+  border-left: thin solid #7477BF;
   grid-area: recent; }
 .members__message {
   grid-area: message; }
 .members__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin-left: 0.5em; }
 .members__item {
+  align-self: center;
+  width: 95%;
   display: flex;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  border-bottom: thin solid #7477BF;
+  padding-bottom: 0.5em; }
+  .members__item:last-child {
+    border: none; }
 .members__container {
   display: flex; }
 .members__details {
@@ -289,8 +302,40 @@
   margin-right: 0.5em; }
 .members__date {
   align-self: flex-end; }
+.members__input {
+  border-radius: 0.375em;
+  border: thin solid #E2E3F6;
+  background: #FBFBFB;
+  padding: 0.5em;
+  margin-bottom: 1em; }
+.members__textarea {
+  border-radius: 0.375em;
+  border: thin solid #E2E3F6;
+  background: #FBFBFB;
+  padding: 0.5em; }
+.members__message {
+  display: flex;
+  flex-direction: column; }
+.members__submit {
+  margin-top: 1em;
+  display: block; }
 
 .settings {
   grid-area: settings; }
+  .settings__list {
+    list-style: none; }
+  .settings__time {
+    outline: none;
+    border: thin solid #E2E3F6;
+    border-radius: 0.375em;
+    padding: 0.5em;
+    background: #FBFBFB;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* remove default arrow */
+    background: url("../../icons/down.svg") no-repeat right; }
+  .settings option {
+    background: #FBFBFB; }
 
 /*# sourceMappingURL=styles.css.map */

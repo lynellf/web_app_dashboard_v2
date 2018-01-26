@@ -1,16 +1,21 @@
 .bottom {
     display: grid;
     grid-template-areas: "new recent" "message settings";
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
     grid-template-columns: 1fr 1fr;
 }
 
 .members {
     @include e('new') {
-        grid-area: 'new';
+        border-top: thin solid $ship-cove;
+        border-bottom: thin solid $ship-cove;
+        grid-area: new;
     }
 
     @include e('recent') {
+        border-top: thin solid $ship-cove;
+        border-bottom: thin solid $ship-cove;
+        border-left: thin solid $ship-cove;
         grid-area: recent;
     }
 
@@ -19,14 +24,24 @@
     }
 
     @include e('list') {
+        display: flex;
+        flex-direction: column;
         list-style: none;
         padding: 0;
         margin-left: pem(8);
     }
 
     @include e('item') {
+        // padding: 0 pem(8);
+        align-self: center;
+        width: 95%;
         display: flex;
         margin-bottom: pem(16);
+        border-bottom: thin solid $site-secondary;
+        padding-bottom: pem(8);
+        &:last-child {
+            border: none;
+        }
     }
 
     @include e('container') {
@@ -52,8 +67,55 @@
     @include e('date') {
         align-self: flex-end;
     }
+
+
+    @include e('input') {
+        border-radius: pem(6);
+        border: thin solid $link-water;
+        background: $alabaster;
+        padding: pem(8);
+        margin-bottom: pem(16);
+    }
+
+    @include e('textarea') {
+        border-radius: pem(6);
+        border: thin solid $link-water;
+        background: $alabaster;
+        padding: pem(8);
+    }
+
+    @include e('message') {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include e('submit') {
+        margin-top: pem(16);
+        display: block;
+    }
 }
 
 .settings {
     grid-area: settings;
+    @include e('list') {
+        list-style: none;
+    }
+
+    @include e('time') {
+        outline: none;
+        border: thin solid $link-water;
+        border-radius: pem(6);
+        padding: pem(8);
+        background: $alabaster;
+        -webkit-appearance: none; 
+        -moz-appearance: none;
+        appearance: none;       /* remove default arrow */
+        background: url('../../icons/down.svg') no-repeat right;
+    }
+
+    option {
+        background: $alabaster;
+    }
+
+
 }
