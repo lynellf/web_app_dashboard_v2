@@ -259,31 +259,34 @@
 
 .bottom {
   display: grid;
-  grid-template-areas: "new recent" "message settings";
-  grid-template-rows: 0.5fr 1fr;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-areas: "new recent" "message settings"; }
 
 .members__new {
   border-top: thin solid #7477BF;
   border-bottom: thin solid #7477BF;
+  border-right: thin solid #7477BF;
+  padding: 0.5em;
   grid-area: new; }
 .members__recent {
   border-top: thin solid #7477BF;
   border-bottom: thin solid #7477BF;
-  border-left: thin solid #7477BF;
+  padding: 0.5em;
   grid-area: recent; }
 .members__message {
-  grid-area: message; }
+  grid-area: message;
+  display: flex;
+  flex-direction: column;
+  padding: 1em; }
 .members__list {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 0;
-  margin-left: 0.5em; }
+  padding: 0; }
 .members__item {
   align-self: center;
   width: 95%;
   display: flex;
+  font-size: 0.75em;
   margin-bottom: 1em;
   border-bottom: thin solid #7477BF;
   padding-bottom: 0.5em; }
@@ -318,14 +321,15 @@
   background: #FBFBFB;
   padding: 0.5em;
   display: block;
+  min-height: 7.75em;
   width: 95%;
   margin: auto; }
 .members__submit {
   width: 95%;
   margin: auto;
   border-radius: 0.375em;
-  font-weight: 700;
   padding: 1em;
+  font-weight: 700;
   color: #FBFBFB;
   background: #4D4B72;
   border: none;
@@ -333,16 +337,20 @@
 .members__message {
   display: flex;
   flex-direction: column;
-  border-right: thin solid #7477BF;
-  padding-right: 0.5em; }
+  border-right: thin solid #7477BF; }
 .members__submit {
   margin-top: 1em;
   display: block; }
 
 .settings {
-  grid-area: settings; }
+  grid-area: settings;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
   .settings__list {
-    list-style: none; }
+    list-style: none;
+    padding: 0; }
   .settings__item {
     display: flex;
     justify-content: space-between; }
@@ -417,17 +425,20 @@
   .settings option {
     background: #FBFBFB; }
   .settings__btn-group {
-    display: flex;
-    justify-content: space-around; }
+    display: flex; }
   .settings__btn {
     width: 45%;
-    margin: auto;
-    border-radius: 0.375em;
     font-weight: 700;
     padding: 1em;
+    border-radius: 0.375em;
     color: #FBFBFB;
     background: #4D4B72;
     border: none;
-    outline: none; }
+    outline: none;
+    margin-top: 1em; }
+    .settings__btn:first-child {
+      margin-right: auto; }
+    .settings__btn:last-child {
+      margin-left: auto; }
 
 /*# sourceMappingURL=styles.css.map */

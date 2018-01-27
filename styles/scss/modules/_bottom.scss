@@ -1,26 +1,30 @@
 .bottom {
     display: grid;
     grid-template-areas: "new recent" "message settings";
-    grid-template-rows: 0.5fr 1fr;
-    grid-template-columns: 1fr 1fr;
 }
 
 .members {
     @include e('new') {
         border-top: thin solid $ship-cove;
         border-bottom: thin solid $ship-cove;
+        border-right: thin solid $ship-cove;
+        padding: pem(8);
         grid-area: new;
     }
 
     @include e('recent') {
         border-top: thin solid $ship-cove;
         border-bottom: thin solid $ship-cove;
-        border-left: thin solid $ship-cove;
+        // border-left: thin solid $ship-cove;
+        padding: pem(8);
         grid-area: recent;
     }
 
     @include e('message') {
         grid-area: message;
+        display: flex;
+        flex-direction: column;
+        padding: pem(16);
     }
 
     @include e('list') {
@@ -28,14 +32,13 @@
         flex-direction: column;
         list-style: none;
         padding: 0;
-        margin-left: pem(8);
     }
 
     @include e('item') {
-        // padding: 0 pem(8);
         align-self: center;
         width: 95%;
         display: flex;
+        font-size: pem(12);
         margin-bottom: pem(16);
         border-bottom: thin solid $site-secondary;
         padding-bottom: pem(8);
@@ -87,6 +90,7 @@
         background: $alabaster;
         padding: pem(8);
         display: block;
+        min-height: pem(124);
         width: 95%;
         margin: auto;
     }
@@ -95,8 +99,8 @@
         width: 95%;
         margin: auto;
         border-radius: pem(6);
-        font-weight: 700;
         padding: pem(16);
+        font-weight: 700;
         color: $alabaster;
         background: $site-primary;
         border: none;
@@ -107,7 +111,6 @@
         display: flex;
         flex-direction: column;
         border-right: thin solid $ship-cove;
-        padding-right: pem(8);
     }
 
     @include e('submit') {
@@ -118,8 +121,13 @@
 
 .settings {
     grid-area: settings;
+    padding: pem(16);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     @include e('list') {
         list-style: none;
+        padding: 0;
     }
 
     @include e('item') {
@@ -219,19 +227,24 @@
 
     @include e('btn-group') {
         display: flex;
-        justify-content: space-around;
     }
 
     @include e('btn') {
         width: 45%;
-        margin: auto;
-        border-radius: pem(6);
         font-weight: 700;
         padding: pem(16);
+        border-radius: pem(6);
         color: $alabaster;
         background: $site-primary;
         border: none;
         outline: none;
+        margin-top: pem(16);
+        &:first-child {
+            margin-right: auto;
+        }
+        &:last-child {
+            margin-left: auto;
+        }
     }
 
 
