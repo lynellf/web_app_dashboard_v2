@@ -1,0 +1,12 @@
+.notification {
+    position: relative;
+    @include e('signal') {
+        top: -10%;
+        right: -40%;
+        position: absolute;
+        fill: #77B988;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

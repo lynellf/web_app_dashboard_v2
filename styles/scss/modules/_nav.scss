@@ -11,43 +11,48 @@
         @include mq('sm') {
             margin: pem(16);
         }
-        list-style: none;
-        margin: pem(32);
+        @include mq('lg') {
+            margin: pem(32);
+        }
     }
 
     @include e('dashboard') {
+        width: auto;
         @include mq('sm') {
-            width: auto;
             height: pem(20);
         }
-        width: auto;
-        height: pem(35);
+        @include mq('lg') {
+            height: pem(35);
+        }
     }
 
     @include e('members') {
+        width: auto;
         @include mq('sm') {
-            width: auto;
             height: pem(20);
         }
-        width: auto;
-        height: pem(35);
+        @include mq('lg') {
+            height: pem(35);
+        }
     }
 
     @include e('visits') {
+        width: auto;
         @include mq('sm') {
-            width: auto;
             height: pem(20);
         }
-        width: auto;
-        height: pem(35);
+        @include mq('lg') {
+            height: pem(35);
+        }
     }
 
     @include e('settings') {
+        width: auto;
         @include mq('sm') {
-            width: auto;
             height: pem(20);
         }
-        width: auto;
-        height: pem(35);
+        @include mq('lg') {
+            height: pem(35);
+        }
     }
 }

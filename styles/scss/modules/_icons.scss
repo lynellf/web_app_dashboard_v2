@@ -1,5 +1,8 @@
 .icon {
     @include m('close') {
+        &:hover {
+            cursor: pointer;
+        }
         &::after {
             content: attr(icon);
             font-weight: 800;
@@ -10,10 +13,50 @@
 
     @include m('search') {
         position: relative;
-        top: 10px;
-        left: 195px;
         color: black;
         height: 15px;
         fill: black;
+        top: 9px;
+        left: 175px;
+        // Google Chrome
+        @supports (-webkit-appearance: none) {
+            top: 10px;
+            left: 200px;
+        }
+        // Microsoft Edge
+        @supports (-ms-ime-align: auto) {
+            top: 10px;
+            left: 185px;
+        }
+    }
+
+    @include m('notifications') {
+        margin: pem(6) auto;
+        &:hover {
+            cursor: pointer;
+        }
+        @include mq('sm') {
+            width: auto;
+            height: pem(18);
+        }
+        @include mq('lg') {
+            width: auto;
+            height: pem(20);
+        }
+    }
+
+    @include m('new-notifications') {
+        margin: pem(6) auto;
+        &:hover {
+            cursor: pointer;
+        }
+        @include mq('sm') {
+            width: auto;
+            height: pem(18);
+        }
+        @include mq('lg') {
+            width: auto;
+            height: pem(20);
+        }
     }
 }
