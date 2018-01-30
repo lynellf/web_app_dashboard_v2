@@ -19,6 +19,11 @@
         display: flex;
         background: $link-water;
         border: thin solid $ship-cove;
+        @include mq('sm') {
+            padding: pem(8);
+            flex-direction: column;
+            align-items: center;
+        }
         @include mq('lg') {
             padding: pem(20);
         }
@@ -32,6 +37,9 @@
     }
 
     @include e('header') {
+        @include mq('sm') {
+            display: none;
+        }
         @include mq('lg') {
             margin-top: pem(15);
         }
@@ -39,6 +47,11 @@
     }
 
     @include e('counter') {
+        @include mq('sm') {
+            display: inline-block;
+            margin: pem(8) 0;
+            font-weight: 700;
+        }
         @include mq('lg') {
             font-weight: 0;
             font-size: pem(35);
@@ -47,6 +60,12 @@
 
     @include e('twitter') {
         fill: white;
+
+        @include mq('sm') {
+            margin: auto;
+            margin-top: pem(2);
+            height: 30px;
+        }
         
         @include mq('lg') {
             margin-top: pem(2);
@@ -55,6 +74,11 @@
 
     @include e('facebook') {
         fill: white;
+        @include mq('sm') {
+            margin: pem(-3) 0;
+            height: 30px;
+        }
+
         @include mq('lg') {
             margin: pem(-3) 0;
         }
@@ -62,6 +86,11 @@
 
     @include e('google') {
         fill: white;
+        @include mq('sm') {
+            margin: pem(-2) 0;
+            margin-left: pem(2);
+            height: 30px;
+        }
         @include mq('lg') {
             margin: pem(-2) 0;
             margin-left: pem(2);
@@ -72,8 +101,12 @@
         display: block;
         background: $mulled-wine;
         border-radius: 50%;
-        height: 75px;
+        @include mq('sm') {
+            height: 50px;
+            padding: pem(10);
+        }
         @include mq('lg') {
+            height: 75px;
             padding: pem(20);
         }
     }

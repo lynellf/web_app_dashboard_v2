@@ -21,15 +21,32 @@
         justify-content: space-between;
     }
 
-    @include e('config') {
+    @include e('list') {
         display: flex;
         list-style: none;
-        justify-content: space-around;
         padding: 0;
+        @include mq('sm') {
+            width: 80%;
+            justify-content: space-around;
+            margin: pem(20) 0;
+        }
+        @include mq('lg') {
+            justify-content: space-around;
+        }
+        
+    }
+
+    @include e('title') {
+        @include mq('sm') {
+            margin: pem(15) 0;
+        }
     }
 
     @include e('option') {
         font-weight: 600;
+        @include mq('sm') {
+            padding: pem(3);
+        }
         @include mq('lg') {
             padding: pem(8);
         }
@@ -38,7 +55,9 @@
         }
 
         &:nth-child(2) {
-            margin: 0 pem(16);
+            @include mq('lg') {
+                margin: 0 pem(16);
+            }
         }
 
         @include m('active') {
@@ -46,6 +65,9 @@
             background: #77B988;
             border-radius: 24px;
             color: white;
+            @include mq('sm') {
+                padding: pem(3);
+            }
             @include mq('lg') {
                 padding: pem(8);
             }
@@ -54,11 +76,16 @@
             }
 
             &:nth-child(2) {
-                margin: 0 pem(16);
+                @include mq('lg') {
+                    margin: 0 pem(16);
+                }
+                
             }
 
             &:nth-child(3) {
-                margin: 0 pem(16);
+                @include mq('lg') {
+                    margin: 0 pem(16);
+                }
             }
             
         }
@@ -71,29 +98,38 @@
         border-left: none;
         border-bottom: thin solid black;
         border-right: none;
+        @include mq('sm') {
+            padding: pem(16) 0;
+        }
         @include mq('lg') {
             padding: pem(20);
         }
     }
     @include e('mobile') {
         grid-area: mobile;
-        border: thin solid black;
-        border-bottom: none;
-        border-right: none;
         border-bottom: thin solid black;
+        @include mq('sm') {
+            padding: pem(16) 0;
+        }
         @include mq('lg') {
             padding: 0 pem(20);
+            border: thin solid black;
+            border-bottom: none;
+            border-right: none;
         }
     }
 
-    @include m('active') {
-        visibility: visible;
-        display: block;
-    }
+    @include e('ranged') {
+        @include m('small') {
+            @include mq('lg') {
+                display: none !important;
+            }
+        }
 
-    @include m('inactive') {
-        
-        visibility: hidden;
-        display: none;
+        @include m('large') {
+            @include mq('sm') {
+                display: none !important;
+            }
+        }
     }
 }

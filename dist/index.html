@@ -57,23 +57,21 @@
     </nav>
     <!-- Step One (c): Main content area where the specific dashboard widgets will go. -->
     <main class="main">
-        <div class="top">
-            <div class="top__header">
-                <div class="top__title">
+        <div class="search">
+            <div class="search__header">
+                <div class="search__title">
                     <span>Dashboard</span>
                 </div>
-                <div class="top__search">
-                    <span>
-                        <img src="icons/icon-search.svg" alt="Search" class="icon--search">
-                    </span>
-                    <input type="text" class="top__searchbar" placeholder="search">
+                <div class="search__search">
+                    <img src="icons/icon-search.svg" alt="Search" class="icon--search">
+                    <input type="text" class="search__searchbar" placeholder="search">
                 </div>
             </div>
             <!-- Step Two (a): Alert bar should be visible at the top but able to be closed when clicking the X button -->
-            <div class="top__alert">
-                <div class="top__alet-content">
+            <div class="search__alert">
+                <div class="search__alet-content">
                     <strong>Alert</strong>
-                    <span class="top__alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. </span>
+                    <span class="search__alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. </span>
                 </div>
                 <span class="icon--close" icon="x"></span>
             </div>
@@ -86,7 +84,7 @@
             <div class="traffic__main">
                 <div class="traffic__menu">
                     <h3 class="traffic__title">Traffic</h3>
-                    <ul class="traffic__config">
+                    <ul class="traffic__list">
                         <li class="traffic__option">Hourly</li>
                         <li class="traffic__option">Daily</li>
                         <li class="traffic__option--active">Weekly</li>
@@ -95,7 +93,8 @@
                 </div>
                 <!-- Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a
                         different line chart is displayed on click. -->
-                <canvas id="rangedTraffic" height="50" class="traffic--active"></canvas>
+                <canvas id="rangedTraffic"height="100" class="traffic__ranged--small"></canvas>
+                <canvas id="rangedTraffic" height="50" class="traffic__ranged--large"></canvas>
             </div>
             <div class="traffic__daily">
                 <h3 class="traffic__title">Daily Traffic</h3>

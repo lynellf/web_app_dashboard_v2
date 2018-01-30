@@ -34,11 +34,12 @@
     @include mq('lg') {
         grid-area: main;
         display: grid;
-        grid-template-areas: "top" "traffic" "social" "bottom";
+        grid-template-areas: "search" "traffic" "social" "bottom";
     }
 }
 
 .bottom {
+    // overflow x is being caused here
     @include mq('sm') {
         display: flex;
         flex-direction: column;

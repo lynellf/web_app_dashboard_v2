@@ -1,13 +1,17 @@
-.top {
-    grid-area: top;
+.search {
+    grid-area: search;
     @include e('header') {
         display: flex;
         justify-content: space-between;
         background: $link-water;
+        @include mq('sm') {
+            margin-bottom: pem(8);
+        }
     }
 
     @include e('title') {
         background: $site-tertiary;
+        padding: pem(16) pem(6) pem(16) pem(10);
         @include mq('lg') {
             padding: pem(16);
         }
@@ -16,23 +20,32 @@
     @include e('search') {
         display: flex;
         justify-content: flex-end;
-        border-bottom: pem(1) solid $site-primary;
-        border-left: pem(1) solid $site-primary;
         @include mq('lg') {
             width: 95%;
             padding: pem(16);
+            border-bottom: pem(1) solid $site-primary;
+            border-left: pem(1) solid $site-primary;
         }
     }
 
     @include e('searchbar') {
         padding: pem(6);
+        @include mq('sm') {
+            border-bottom: pem(1) solid $site-primary;
+            border-left: pem(1) solid $site-primary;
+        }
     }
+
     @include e('alert') {
         display: flex;
         justify-content: space-between;
         background: $site-secondary;
         color: $font-color-primary;
         border-radius: pem(6);
+        @include mq('sm') {
+            font-size: pem(13);
+            padding: pem(8);
+        }
         @include mq('lg') {
             margin: pem(16);
             padding: pem(16);

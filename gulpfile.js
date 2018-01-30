@@ -40,6 +40,11 @@ gulp.task('compileSass', function() {
         .src('styles/scss/styles.scss')
         .pipe(maps.init())
         .pipe(sass())
+        .on('error', function (err) {
+            console.log(err.toString());
+
+            this.emit('end');
+        })
         .pipe(maps.write('styles/css'))
         .pipe(gulp.dest('styles/css'));
 });

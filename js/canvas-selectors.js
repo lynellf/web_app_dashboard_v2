@@ -8,11 +8,14 @@
 
 // Step Three (a): using chart.js create and include the information for the following chart widgets as shown in the mockup for the 1. web traffic
 
-var rangedTrafficLine = document.querySelector('#rangedTraffic'),
+var lineChartSmall = document.querySelector('.traffic__ranged--small'),
+    lineChartLarge = document.querySelector('.traffic__ranged--large'),
+
     
     trafficDaily = document.querySelector('#trafficBar'),
     trafficMobile = document.querySelector('#trafficPie'),
-    rangedTrafficChart = new Chart(rangedTrafficLine, hourlyData),
+    rangedTrafficSmall = new Chart(lineChartSmall, hourlyData),
+    rangedTrafficLarge = new Chart(lineChartLarge, hourlyData),
     // Bar chart
     dailyTrafficBarChart = new Chart(trafficDaily, barData),
     mobileTrafficDoughnutChart = new Chart(trafficMobile, doughnutData);

@@ -1,6 +1,6 @@
 // Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a different line chart is displayed on click.
 
-var timeOptions = document.querySelectorAll('.traffic__config li');
+var timeOptions = document.querySelectorAll('.traffic__list li');
 
 // Load previous configuration from localStorage and set classNames accordingly
 if (localStorage.trafficIndex) {
@@ -24,13 +24,17 @@ for (var i = 0; i < timeOptions.length; i++) {
         event.target.className = 'traffic__option--active';
 
         if (eventIndex === 0) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, hourlyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, hourlyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, hourlyData);
         } else if (eventIndex === 1) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, weeklyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, dailyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, dailyData);
         } else if (eventIndex === 2) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, weeklyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, weeklyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, weeklyData);
         } else if (eventIndex === 3) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, monthlyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, monthlyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, monthlyData);
         }
     });
 }

@@ -344,11 +344,14 @@ var weeklyData = {
 
 // Step Three (a): using chart.js create and include the information for the following chart widgets as shown in the mockup for the 1. web traffic
 
-var rangedTrafficLine = document.querySelector('#rangedTraffic'),
+var lineChartSmall = document.querySelector('.traffic__ranged--small'),
+    lineChartLarge = document.querySelector('.traffic__ranged--large'),
+
     
     trafficDaily = document.querySelector('#trafficBar'),
     trafficMobile = document.querySelector('#trafficPie'),
-    rangedTrafficChart = new Chart(rangedTrafficLine, hourlyData),
+    rangedTrafficSmall = new Chart(lineChartSmall, hourlyData),
+    rangedTrafficLarge = new Chart(lineChartLarge, hourlyData),
     // Bar chart
     dailyTrafficBarChart = new Chart(trafficDaily, barData),
     mobileTrafficDoughnutChart = new Chart(trafficMobile, doughnutData);
@@ -380,7 +383,7 @@ var userElements = document.querySelectorAll('.members__name'),
 
 // Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a different line chart is displayed on click.
 
-var timeOptions = document.querySelectorAll('.traffic__config li');
+var timeOptions = document.querySelectorAll('.traffic__list li');
 
 // Load previous configuration from localStorage and set classNames accordingly
 if (localStorage.trafficIndex) {
@@ -404,13 +407,17 @@ for (var i = 0; i < timeOptions.length; i++) {
         event.target.className = 'traffic__option--active';
 
         if (eventIndex === 0) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, hourlyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, hourlyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, hourlyData);
         } else if (eventIndex === 1) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, weeklyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, dailyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, dailyData);
         } else if (eventIndex === 2) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, weeklyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, weeklyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, weeklyData);
         } else if (eventIndex === 3) {
-            rangedTrafficChart = new Chart(rangedTrafficLine, monthlyData);
+            rangedTrafficSmall = new Chart(lineChartSmall, monthlyData);
+            rangedTrafficLarge = new Chart(lineChartLarge, monthlyData);
         }
     });
 }
@@ -418,8 +425,8 @@ for (var i = 0; i < timeOptions.length; i++) {
 // Step Two (a): Alert bar should be visible at the top but able to be
 // closed when clicking the X button 
 
-var alertParent = document.querySelector('.top'),
-    alert = document.querySelector('.top__alert'),
+var alertParent = document.querySelector('.search'),
+    alert = document.querySelector('.search__alert'),
     xIcon = document.querySelector('.icon--close'),
     alertClosed = false;
 

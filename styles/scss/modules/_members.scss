@@ -35,6 +35,10 @@
         align-self: center;
         width: 95%;
         display: flex;
+        @include mq('sm') {
+            font-size: pem(12);
+            word-wrap: inherit;
+        }
         @include mq('lg') {
             font-size: pem(12);
             margin-bottom: pem(16);

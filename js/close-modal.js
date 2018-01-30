@@ -1,8 +1,8 @@
 // Step Two (a): Alert bar should be visible at the top but able to be
 // closed when clicking the X button 
 
-var alertParent = document.querySelector('.top'),
-    alert = document.querySelector('.top__alert'),
+var alertParent = document.querySelector('.search'),
+    alert = document.querySelector('.search__alert'),
     xIcon = document.querySelector('.icon--close'),
     alertClosed = false;
 
