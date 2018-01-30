@@ -35,10 +35,24 @@
     display: grid;
     grid-template-areas: "top" "traffic" "social" "bottom"; } }
 
+@media (max-width: 767px) {
+  .bottom {
+    display: flex;
+    flex-direction: column; } }
+
+@media (min-width: 1024px) {
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "new recent" "message settings"; } }
+
 .header {
   background: #7477BF;
   color: #FBFBFB;
   display: flex; }
+  @media (max-width: 767px) {
+    .header {
+      justify-content: space-around; } }
   @media (min-width: 1024px) {
     .header {
       justify-content: space-between; } }
@@ -67,6 +81,9 @@
         padding-right: 1em; } }
   .header__user-info-div {
     display: flex; }
+    @media (max-width: 767px) {
+      .header__user-info-div {
+        justify-content: space-between; } }
     @media (min-width: 1024px) {
       .header__user-info-div {
         padding-left: 1em; } }
@@ -91,6 +108,10 @@
   color: #FBFBFB; }
   .nav__list {
     padding: 0; }
+    @media (max-width: 767px) {
+      .nav__list {
+        display: flex;
+        justify-content: space-around; } }
   .nav__item {
     list-style: none; }
     @media (max-width: 767px) {
@@ -136,6 +157,7 @@
   grid-area: top; }
   .top__header {
     display: flex;
+    justify-content: space-between;
     background: #E2E3F6; }
   .top__title {
     background: #FBFBFB; }
@@ -146,10 +168,10 @@
     display: flex;
     justify-content: flex-end;
     border-bottom: 0.0625em solid #4D4B72;
-    border-left: 0.0625em solid #4D4B72;
-    width: 95%; }
+    border-left: 0.0625em solid #4D4B72; }
     @media (min-width: 1024px) {
       .top__search {
+        width: 95%;
         padding: 1em; } }
   .top__searchbar {
     padding: 0.375em; }
@@ -216,6 +238,16 @@
     .icon--new-notifications {
       width: auto;
       height: 1.25em; } }
+
+.notification {
+  position: relative; }
+  .notification__signal {
+    top: -10%;
+    right: -40%;
+    position: absolute;
+    fill: #77B988; }
+    .notification__signal:hover {
+      cursor: pointer; }
 
 .traffic {
   height: 50%; }
@@ -348,17 +380,6 @@
     @media (min-width: 1024px) {
       .social__span {
         padding: 1.25em; } }
-
-@media (max-width: 767px) {
-  .bottom {
-    display: flex;
-    flex-direction: column; } }
-
-@media (min-width: 1024px) {
-  .bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "new recent" "message settings"; } }
 
 @media (min-width: 1024px) {
   .members__new {
@@ -668,15 +689,5 @@
       cursor: pointer;
       color: white;
       background: #7477BF; }
-
-.notification {
-  position: relative; }
-  .notification__signal {
-    top: -10%;
-    right: -40%;
-    position: absolute;
-    fill: #77B988; }
-    .notification__signal:hover {
-      cursor: pointer; }
 
 /*# sourceMappingURL=styles/css/styles.css.map */

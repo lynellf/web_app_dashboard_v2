@@ -2,6 +2,9 @@
     background: $site-secondary;
     color: $font-color-primary;
     display: flex;
+    @include mq('sm') {
+        justify-content: space-around;
+    }
     @include mq('lg') {
         justify-content: space-between;
     }
@@ -39,6 +42,9 @@
 
     @include e('user-info-div') {
         display: flex;
+        @include mq('sm') {
+            justify-content: space-between;
+        }
         @include mq('lg') {
             padding-left: pem(16);
         }

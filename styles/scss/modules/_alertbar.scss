@@ -2,7 +2,7 @@
     grid-area: top;
     @include e('header') {
         display: flex;
-        // justify-content: space-between;
+        justify-content: space-between;
         background: $link-water;
     }
 
@@ -18,8 +18,8 @@
         justify-content: flex-end;
         border-bottom: pem(1) solid $site-primary;
         border-left: pem(1) solid $site-primary;
-        width: 95%;
         @include mq('lg') {
+            width: 95%;
             padding: pem(16);
         }
     }

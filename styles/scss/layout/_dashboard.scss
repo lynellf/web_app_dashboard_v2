@@ -37,3 +37,16 @@
         grid-template-areas: "top" "traffic" "social" "bottom";
     }
 }
+
+.bottom {
+    @include mq('sm') {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include mq('lg') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "new recent" "message settings";
+    }
+}
