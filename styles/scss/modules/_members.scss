@@ -37,7 +37,7 @@
         display: flex;
         @include mq('sm') {
             font-size: pem(12);
-            word-wrap: inherit;
+            margin-bottom: pem(16);
         }
         @include mq('lg') {
             font-size: pem(12);
@@ -63,6 +63,11 @@
     }
     @include e('avy') {
         border-radius: 50%;
+        @include mq('sm') {
+            width: auto;
+            height: pem(45);
+            margin-right: pem(8);
+        }
         @include mq('lg') {
             margin-right: pem(8);
         }
@@ -83,6 +88,11 @@
         margin: auto;
         display: block;
         width: 95%;
+
+        @include mq('sm') {
+            padding: pem(8);
+            margin-bottom: pem(8);
+        }
         @include mq('lg') {
             padding: pem(8);
             margin-bottom: pem(8);
@@ -94,6 +104,11 @@
         background: $alabaster;
         display: block;
         width: 95%;
+        @include mq('sm') {
+            align-self: center;
+            margin-top: pem(8);
+            min-height: pem(124);
+        }
         @include mq('lg') {
             margin: auto;
             padding: pem(8);
@@ -109,8 +124,14 @@
         border: none;
         outline: none;
         transition: all .1s ease-in-out;
+
+        @include mq('sm') {
+            align-self: center;
+            margin-top: pem(8);
+            padding: pem(8);
+        }
         @include mq('lg') {
-            margin: auto;
+            align-self: center;
             padding: pem(16);
         }
         &:active {
@@ -142,10 +163,8 @@
             color: $alabaster;
             font-weight: 700;
             align-self: center;
-            @include mq('lg') {
-                margin-bottom: pem(8);
-                padding: pem(8);
-            }
+            margin-bottom: pem(8);
+            padding: pem(8);
         }
     }
 
@@ -156,10 +175,8 @@
             color: $alabaster;
             font-weight: 700;
             align-self: center;
-            @include mq('lg') {
-                padding: pem(8);
-                margin: pem(8) 0;
-            }
+            padding: pem(8);
+            margin: pem(8) 0;
         }
     }
 
@@ -170,10 +187,8 @@
             color: $alabaster;
             font-weight: 700;
             align-self: center;
-            @include mq('lg') {
-                padding: pem(8);
-                margin-bottom: pem(8);
-            }
+            padding: pem(8);
+            margin-bottom: pem(8);
         }
     }
     

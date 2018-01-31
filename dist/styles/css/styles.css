@@ -485,7 +485,7 @@
   @media (max-width: 767px) {
     .members__item {
       font-size: 0.75em;
-      word-wrap: inherit; } }
+      margin-bottom: 1em; } }
   @media (min-width: 1024px) {
     .members__item {
       font-size: 0.75em;
@@ -509,6 +509,11 @@
 
 .members__avy {
   border-radius: 50%; }
+  @media (max-width: 767px) {
+    .members__avy {
+      width: auto;
+      height: 2.8125em;
+      margin-right: 0.5em; } }
   @media (min-width: 1024px) {
     .members__avy {
       margin-right: 0.5em; } }
@@ -527,6 +532,10 @@
   margin: auto;
   display: block;
   width: 95%; }
+  @media (max-width: 767px) {
+    .members__input {
+      padding: 0.5em;
+      margin-bottom: 0.5em; } }
   @media (min-width: 1024px) {
     .members__input {
       padding: 0.5em;
@@ -538,6 +547,11 @@
   background: #FBFBFB;
   display: block;
   width: 95%; }
+  @media (max-width: 767px) {
+    .members__textarea {
+      align-self: center;
+      margin-top: 0.5em;
+      min-height: 7.75em; } }
   @media (min-width: 1024px) {
     .members__textarea {
       margin: auto;
@@ -553,9 +567,14 @@
   border: none;
   outline: none;
   transition: all .1s ease-in-out; }
+  @media (max-width: 767px) {
+    .members__submit {
+      align-self: center;
+      margin-top: 0.5em;
+      padding: 0.5em; } }
   @media (min-width: 1024px) {
     .members__submit {
-      margin: auto;
+      align-self: center;
       padding: 1em; } }
   .members__submit:active {
     background: #7477BF; }
@@ -580,33 +599,27 @@
   background: #6db96d;
   color: #FBFBFB;
   font-weight: 700;
-  align-self: center; }
-  @media (min-width: 1024px) {
-    .members__success-message--active {
-      margin-bottom: 0.5em;
-      padding: 0.5em; } }
+  align-self: center;
+  margin-bottom: 0.5em;
+  padding: 0.5em; }
 
 .members__text-error--active {
   border-radius: 0.375em;
   background: #d47373;
   color: #FBFBFB;
   font-weight: 700;
-  align-self: center; }
-  @media (min-width: 1024px) {
-    .members__text-error--active {
-      padding: 0.5em;
-      margin: 0.5em 0; } }
+  align-self: center;
+  padding: 0.5em;
+  margin: 0.5em 0; }
 
 .members__search-error--active {
   border-radius: 0.375em;
   background: #d47373;
   color: #FBFBFB;
   font-weight: 700;
-  align-self: center; }
-  @media (min-width: 1024px) {
-    .members__search-error--active {
-      padding: 0.5em;
-      margin-bottom: 0.5em; } }
+  align-self: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em; }
 
 .settings {
   display: flex;
