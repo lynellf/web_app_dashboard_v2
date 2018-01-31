@@ -3,10 +3,6 @@
         display: flex;
         flex-direction: column;
     }
-    @include mq('med') {
-        
-    }
-
     @include mq('lg') {
         display: grid;
         margin: 0;

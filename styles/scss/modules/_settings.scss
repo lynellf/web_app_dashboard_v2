@@ -1,6 +1,9 @@
 .settings {
     display: flex;
     flex-direction: column;
+    @include mq('sm') {
+        padding: pem(8);
+    }
     @include mq('lg') {
         grid-area: settings;
         padding: pem(16);
@@ -15,9 +18,15 @@
         justify-content: space-between;
     }
     // overflow x is being caused here
-    @include e('switch') {
+    @include e('switch-label') {
         position: relative;
         display: inline-block;
+        @include mq('sm') {
+            width: 60px;
+            height: 34px;
+            margin-right: pem(50);
+            margin-bottom: pem(16);
+        }
         @include mq('lg') {
             width: 90px;
             height: 34px;
@@ -28,6 +37,7 @@
             display: none;
         }
     }
+    // On and off switch configuration
     @include e('slider') {
         position: absolute;
         cursor: pointer;
@@ -38,6 +48,9 @@
         background-color: $ship-cove;
         -webkit-transition: .4s;
         transition: .4s;
+        @include mq('sm') {
+            border-radius: 34px;
+        }
         @include mq('lg') {
             border-radius: 34px;
         }
@@ -47,6 +60,13 @@
             background-color: $link-water;
             -webkit-transition: .4s;
             transition: .4s;
+            @include mq('sm') {
+                border-radius: 34px;
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+            }
             @include mq('lg') {
                 border-radius: 34px;
                 height: 26px;
@@ -62,34 +82,59 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            @include mq('sm') {
+                transform: translate(20%, -50%);
+                font-size: 10px;
+            }
             @include mq('lg') {
                 transform: translate(-50%, -50%);
                 font-size: 10px;
             }
         }
     }
-    input:checked+.settings__slider {
-        @include mq('lg') {
-            background-color: $site-primary;
-            &:after {
-                content: 'ON';
-                font-weight: 700;
-                transform: translate(-200%, -50%);
+    @include e('switch') {
+        &:checked + .settings__slider {
+            @include mq('sm') {
+                background-color: $site-primary;
+                &:after {
+                    content: 'ON';
+                    font-weight: 700;
+                    transform: translate(-150%, -50%);
+                }
+            }
+            @include mq('lg') {
+                background-color: $site-primary;
+                &:after {
+                    content: 'ON';
+                    font-weight: 700;
+                    transform: translate(-200%, -50%);
+                }
+            }
+        }
+
+        &:focus + .settings__slider {
+            @include mq('sm') {
+                box-shadow: 0 0 1px $site-primary;
+            }
+            @include mq('lg') {
+                box-shadow: 0 0 1px $site-primary;
+            }
+        }
+
+        &:checked + .settings__slider:before {
+            @include mq('sm') {
+                -webkit-transform: translateX(pem(23));
+                -ms-transform: translateX(pem(23));
+                transform: translateX(pem(23));
+            }
+            @include mq('lg') {
+                -webkit-transform: translateX(pem(55));
+                -ms-transform: translateX(pem(55));
+                transform: translateX(pem(55));
             }
         }
     }
-    input:focus+.settings__slider {
-        @include mq('lg') {
-            box-shadow: 0 0 1px $site-primary;
-        }
-    }
-    input:checked+.settings__slider:before {
-        @include mq('lg') {
-            -webkit-transform: translateX(pem(55));
-            -ms-transform: translateX(pem(55));
-            transform: translateX(pem(55));
-        }
-    }
+
     @include e('time') {
         outline: none;
         border: thin solid $link-water;
@@ -101,8 +146,14 @@
         appearance: none;
         /* remove default arrow */
         background: url('../../icons/down.svg') no-repeat right;
+
+        @include mq('sm') {
+            align-self: center;
+            margin-bottom: pem(16);
+            width: 90%;
+        }
     }
-    option {
+    @include e('zone') {
         background: $alabaster;
     }
     @include e('btn-group') {
@@ -117,6 +168,11 @@
         border: none;
         outline: none;
         transition: all .1s ease-in-out;
+        @include mq('sm') {
+            align-self: center;
+            margin-top: pem(8);
+            padding: pem(8);
+        }
         @include mq('lg') {
             padding: pem(16);
             margin-top: pem(16);

@@ -2,7 +2,7 @@
 // Colors 
 //====================================================
 $mulled-wine: #4D4B72;
-$ship-cove: #7477BF;
+$ship-cove: #7377BF;
 $link-water: #E2E3F6;
 $de-york: #81C98F;
 $glacier: #74B1BF;
@@ -12,6 +12,7 @@ $alabaster: #FBFBFB;
 $site-primary: $mulled-wine;
 $site-secondary: $ship-cove;
 $site-tertiary: $alabaster;
+$site-text: #767676;
 $site-background: $silver-chalice;
 
 $font-color-primary: $alabaster;
@@ -40,4 +41,4 @@ sans-serif;
 //=====================================================
 //Breakpoints
 //=====================================================
-$breaks: ( 'sm': 767px, 'med': 768px, 'lg': 1024px);
+$breaks: ( 'sm': 767px, 'med': 768px, 'lg': 768px);

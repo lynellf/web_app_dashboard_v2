@@ -4,6 +4,10 @@
     flex-direction: column;
     height: auto;
     overflow: hidden;
+    @include mq('sm') {
+        border-bottom: thin solid $ship-cove;
+        padding-bottom: pem(32);
+    }
     @include mq('lg') {
         margin-top: pem(-16);
         margin-bottom: pem(44);

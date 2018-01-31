@@ -1,24 +1,31 @@
 .members {
     @include e('new') {
+        @include mq('sm') {
+            border-bottom: thin solid $ship-cove;
+        }
         @include mq('lg') {
             border-top: thin solid $ship-cove;
             border-bottom: thin solid $ship-cove;
             border-right: thin solid $ship-cove;
-            padding: pem(8);
             grid-area: new;
         }
     }
     @include e('recent') {
+        @include mq('sm') {
+            border-bottom: thin solid $ship-cove;
+        }
         @include mq('lg') {
             border-top: thin solid $ship-cove;
             border-bottom: thin solid $ship-cove;
-            padding: pem(8);
             grid-area: recent;
         }
     }
     @include e('message') {
         display: flex;
         flex-direction: column;
+        @include mq('sm') {
+            border-bottom: thin solid $ship-cove;
+        }
         @include mq('lg') {
             grid-area: message;
             padding: pem(16);
@@ -127,7 +134,7 @@
 
         @include mq('sm') {
             align-self: center;
-            margin-top: pem(8);
+            margin: pem(8) 0;
             padding: pem(8);
         }
         @include mq('lg') {

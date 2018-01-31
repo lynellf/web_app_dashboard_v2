@@ -1,4 +1,6 @@
 .traffic {
+    border-bottom: thin solid $site-secondary;
+    padding-bottom: pem(16);
     @include mq('sm') {
         display: flex;
         flex-direction: column;
@@ -8,17 +10,21 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas : "main main" "daily mobile";
-        padding: pem(20);
     }
-    height: 50%;
 
     @include e('main') {
         grid-area: main;
+        @include mq('sm') {
+            margin-bottom: pem(16);
+        }
     }
 
     @include e('menu') {
         display: flex;
         justify-content: space-between;
+        @include mq('sm') {
+            flex-direction: column;
+        }
     }
 
     @include e('list') {
@@ -27,6 +33,7 @@
         padding: 0;
         @include mq('sm') {
             width: 80%;
+            align-self: center;
             justify-content: space-around;
             margin: pem(20) 0;
         }
@@ -38,7 +45,7 @@
 
     @include e('title') {
         @include mq('sm') {
-            margin: pem(15) 0;
+            margin: 0 0 pem(8) 0;
         }
     }
 
@@ -93,40 +100,34 @@
 
     @include e('daily') {
         grid-area: daily;
-        border: thin solid black;
-        border-bottom: none;
-        border-left: none;
-        border-bottom: thin solid black;
-        border-right: none;
         @include mq('sm') {
+            border-bottom: thin solid $site-secondary;
             padding: pem(16) 0;
-        }
-        @include mq('lg') {
-            padding: pem(20);
         }
     }
     @include e('mobile') {
         grid-area: mobile;
-        border-bottom: thin solid black;
         @include mq('sm') {
             padding: pem(16) 0;
         }
         @include mq('lg') {
             padding: 0 pem(20);
-            border: thin solid black;
-            border-bottom: none;
             border-right: none;
         }
     }
 
     @include e('ranged') {
         @include m('small') {
+            border-bottom: thin solid $site-secondary;
+            padding-bottom: pem(16);
             @include mq('lg') {
                 display: none !important;
             }
         }
 
         @include m('large') {
+            border-bottom: thin solid $site-secondary;
+            padding-bottom: pem(16);
             @include mq('sm') {
                 display: none !important;
             }
