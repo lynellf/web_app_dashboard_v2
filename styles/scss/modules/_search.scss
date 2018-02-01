@@ -10,8 +10,13 @@
     }
 
     @include e('title') {
-        background: $site-tertiary;
+        background: white;
         padding: pem(16) pem(6) pem(16) pem(10);
+
+        @include mq('sm') {
+            padding-right: pem(16);
+            border-right: thin solid $site-primary;
+        }
         @include mq('lg') {
             padding: pem(16);
         }
@@ -20,6 +25,10 @@
     @include e('search') {
         display: flex;
         justify-content: flex-end;
+        @include mq('sm') {
+            width: 95%;
+            border-bottom: pem(1) solid $site-primary;
+        }
         @include mq('lg') {
             width: 95%;
             padding: pem(16);
@@ -31,7 +40,6 @@
     @include e('searchbar') {
         padding: pem(6);
         @include mq('sm') {
-            border-bottom: pem(1) solid $site-primary;
             border-left: pem(1) solid $site-primary;
         }
     }

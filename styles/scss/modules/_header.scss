@@ -3,19 +3,39 @@
     color: $font-color-primary;
     display: flex;
     @include mq('sm') {
-        justify-content: space-around;
+        justify-content: space-between;
     }
     @include mq('lg') {
         justify-content: space-between;
     }
     @include e('title') {
-        @include mq('sm') {
-            padding-left: pem(8);
-            font-size: pem(14);
-        }
+        margin-top: pem(16);
+        padding-left: pem(8);
 
         @include mq('lg') {
             padding-left: pem(16);
+        }
+    }
+
+    @include e('titlea') {
+        @include mq('sm') {
+            font-size: pem(20);
+        }
+
+        @include mq('lg') {
+            font-size: pem(25);
+        }
+    }
+
+    @include e('titleb') {
+        @include mq('sm') {
+            font-size: pem(20);
+            font-weight: 700;
+        }
+
+        @include mq('lg') {
+            font-size: pem(25);
+            font-weight: 700;
         }
     }
 

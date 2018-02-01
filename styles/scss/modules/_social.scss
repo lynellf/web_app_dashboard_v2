@@ -4,6 +4,7 @@
     flex-direction: column;
     height: auto;
     overflow: hidden;
+    padding-top: pem(16);
     @include mq('sm') {
         border-bottom: thin solid $ship-cove;
         padding-bottom: pem(32);

@@ -42,16 +42,10 @@
         align-self: center;
         width: 95%;
         display: flex;
-        @include mq('sm') {
-            font-size: pem(12);
-            margin-bottom: pem(16);
-        }
-        @include mq('lg') {
-            font-size: pem(12);
-            margin-bottom: pem(16);
-            padding-bottom: pem(8);
-            border-bottom: thin solid $site-secondary;
-        }
+        font-size: pem(16);
+        margin-bottom: pem(16);
+        padding-bottom: pem(8);
+        border-bottom: thin solid $site-secondary;
         &:last-child {
             border: none;
         }

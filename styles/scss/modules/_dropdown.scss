@@ -19,6 +19,8 @@
             background: white;
             border-radius: pem(6);
             border: thin solid $site-primary;
+            z-index: 1000;
+            padding: pem(6);
             @include mq('lg') {
                 padding: pem(6);
                 width: pem(300);

@@ -8,11 +8,12 @@ $de-york: #81C98F;
 $glacier: #74B1BF;
 $silver-chalice: #B2B2B2;
 $alabaster: #FBFBFB;
+$boulder: #767676;
 
 $site-primary: $mulled-wine;
 $site-secondary: $ship-cove;
 $site-tertiary: $alabaster;
-$site-text: #767676;
+$site-text: $boulder;
 $site-background: $silver-chalice;
 
 $font-color-primary: $alabaster;
@@ -20,7 +21,7 @@ $font-color-primary: $alabaster;
 //====================================================
 // Font
 //====================================================
-// $font-url: ('https://fonts.googleapis.com/css?family=Open+Sans');
+$font-url: ('https://fonts.googleapis.com/css?family=Carrois+Gothic');
 
 $font-stack-primary: 'Open Sans',
 sans-serif;
@@ -34,9 +35,9 @@ sans-serif;
 }
 
 // Load imported fonts
-// @if variable-exists(font-url) {
-//     @import url($font-url);
-// }
+@if variable-exists(font-url) {
+    @import url($font-url);
+}
 
 //=====================================================
 //Breakpoints

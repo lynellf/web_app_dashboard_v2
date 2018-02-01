@@ -1,6 +1,5 @@
 .traffic {
     border-bottom: thin solid $site-secondary;
-    padding-bottom: pem(16);
     @include mq('sm') {
         display: flex;
         flex-direction: column;
@@ -30,7 +29,7 @@
     @include e('list') {
         display: flex;
         list-style: none;
-        padding: 0;
+        padding-right: pem(8);
         @include mq('sm') {
             width: 80%;
             align-self: center;
@@ -38,7 +37,10 @@
             margin: pem(20) 0;
         }
         @include mq('lg') {
+            // width: 80%;
+            align-self: center;
             justify-content: space-around;
+            margin: pem(20) 0;
         }
         
     }
@@ -51,20 +53,9 @@
 
     @include e('option') {
         font-weight: 600;
-        @include mq('sm') {
-            padding: pem(3);
-        }
-        @include mq('lg') {
-            padding: pem(8);
-        }
+        padding: pem(8);
         &:hover {
             cursor: pointer;
-        }
-
-        &:nth-child(2) {
-            @include mq('lg') {
-                margin: 0 pem(16);
-            }
         }
 
         @include m('active') {
@@ -72,27 +63,9 @@
             background: #77B988;
             border-radius: 24px;
             color: white;
-            @include mq('sm') {
-                padding: pem(3);
-            }
-            @include mq('lg') {
-                padding: pem(8);
-            }
+            padding: pem(8);
             &:hover {
                 cursor: pointer;
-            }
-
-            &:nth-child(2) {
-                @include mq('lg') {
-                    margin: 0 pem(16);
-                }
-                
-            }
-
-            &:nth-child(3) {
-                @include mq('lg') {
-                    margin: 0 pem(16);
-                }
             }
             
         }
@@ -112,7 +85,7 @@
         }
         @include mq('lg') {
             padding: 0 pem(20);
-            border-right: none;
+            border-left: thin solid $site-secondary;
         }
     }
 
