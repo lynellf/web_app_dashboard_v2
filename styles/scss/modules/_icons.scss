@@ -4,10 +4,9 @@
             cursor: pointer;
         }
         &::after {
-            content: attr(icon);
+            content: attr(id);
             font-weight: 800;
             color: white;
-            justify-self: flex-end;
         }
     }
 
@@ -16,7 +15,7 @@
         color: black;
         height: 15px;
         fill: black;
-        top: 9px;
+        top: 15px;
         left: 175px;
         // Google Chrome
         @supports (-webkit-appearance: none) {

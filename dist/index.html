@@ -78,7 +78,7 @@
                     <strong>Alert</strong>
                     <span class="search__alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. </span>
                 </div>
-                <span class="icon--close" icon="x"></span>
+                <span class="icon--close" id="x"></span>
             </div>
         </div>
         <!-- Step Three (a): Using chart.js, create and include the information for the following chart widgets,
@@ -98,8 +98,8 @@
                 </div>
                 <!-- Create a navigation similar to the one in the mockup when the Hours, Daily, Weekly and Monthly button is selected. Add functionality to the Hourly, Daily, Weekly and Monthly buttons so that a
                         different line chart is displayed on click. -->
-                <canvas id="rangedTraffic"height="100" class="traffic__ranged--small"></canvas>
-                <canvas id="rangedTraffic" height="60" class="traffic__ranged--large"></canvas>
+                <canvas height="100" class="traffic__ranged--small"></canvas>
+                <canvas height="60" class="traffic__ranged--large"></canvas>
             </div>
             <div class="traffic__daily">
                 <h3 class="traffic__title">Daily Traffic</h3>
@@ -329,9 +329,8 @@
 
         <!-- Extra Credit -->
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script src="https://goodies.pixabay.com/javascript/auto-complete/auto-complete.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-<script src="https://goodies.pixabay.com/javascript/auto-complete/auto-complete.js"></script>
-<script src="js/dashboard.js"></script>
-
 </html>

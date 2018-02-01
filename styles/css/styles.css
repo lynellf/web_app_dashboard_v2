@@ -252,17 +252,16 @@ a {
   cursor: pointer; }
 
 .icon--close::after {
-  content: attr(icon);
+  content: attr(id);
   font-weight: 800;
-  color: white;
-  justify-self: flex-end; }
+  color: white; }
 
 .icon--search {
   position: relative;
   color: black;
   height: 15px;
   fill: black;
-  top: 9px;
+  top: 15px;
   left: 175px; }
   @supports (-webkit-appearance: none) {
     .icon--search {
@@ -442,7 +441,7 @@ a {
       font-weight: 700; } }
   @media (min-width: 768px) {
     .social__counter {
-      font-weight: 0;
+      font-weight: 100;
       font-size: 2.1875em; } }
   .social__twitter {
     fill: white; }

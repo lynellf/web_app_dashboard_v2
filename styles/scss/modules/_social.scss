@@ -57,7 +57,7 @@
             font-weight: 700;
         }
         @include mq('lg') {
-            font-weight: 0;
+            font-weight: 100;
             font-size: pem(35);
         }
     }
