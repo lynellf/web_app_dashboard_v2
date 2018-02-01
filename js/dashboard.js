@@ -184,19 +184,20 @@ var weeklyData = {
             datasets: [
                 {
                     data: [
-                        800,
-                        1300,
-                        1050,
-                        1500,
-                        2000,
-                        1450,
-                        1800,
-                        1300,
-                        1600,
-                        2300,
-                        2000,
-                        2300,
-                        2450,
+                        3,
+                        4,
+                        1,
+                        5,
+                        5,
+                        10,
+                        7,
+                        7,
+                        6,
+                        3,
+                        9,
+                        1,
+                        8,
+
                     ],
                     borderColor: '#7477BF',
                     backgroundColor: 'rgba(212, 214, 231, 0.46)',
@@ -221,19 +222,20 @@ var weeklyData = {
             datasets: [
                 {
                     data: [
-                        800,
-                        1300,
-                        1050,
-                        1500,
-                        2000,
-                        1450,
-                        1800,
-                        1300,
-                        1600,
-                        2300,
-                        2000,
-                        2300,
-                        2450,
+                        27,
+                        41,
+                        14,
+                        47,
+                        51,
+                        99,
+                        71,
+                        71,
+                        64,
+                        31,
+                        90,
+                        11,
+                        76,
+
                     ],
                     borderColor: '#7477BF',
                     backgroundColor: 'rgba(212, 214, 231, 0.46)',
@@ -258,19 +260,20 @@ var weeklyData = {
             datasets: [
                 {
                     data: [
-                        800,
-                        1300,
-                        1050,
-                        1500,
-                        2000,
-                        1450,
-                        1800,
-                        1300,
-                        1600,
-                        2300,
-                        2000,
-                        2300,
-                        2450,
+                        272,
+                        414,
+                        138,
+                        467,
+                        506,
+                        993,
+                        711,
+                        713,
+                        636,
+                        313,
+                        897,
+                        108,
+                        762
+
                     ],
                     borderColor: '#7477BF',
                     backgroundColor: 'rgba(212, 214, 231, 0.46)',
@@ -456,27 +459,39 @@ var searchErrorSpan = document.querySelector('#searchError'),
     messageBox = document.querySelector('.members__textarea');
 
 submitButton.addEventListener('click', function(event) {
-    if (searchBox.value.length > 0 && messageBox.value.length > 0) {
+    var formData = {
+        userName: searchBox.value,
+        message: messageBox.value
+    };
+
+    if (formData.userName.length > 0 && formData.message.length > 0) {
         successMessageSpan.className = 'members__success-message--active';
         successMessageSpan.textContent = 'Message Sent!';
+        searchErrorSpan.className = 'members__search-error';
+        textAreaErrorSpan.className = 'members__text-error';
+        searchErrorSpan.textContent = '';
+        textAreaErrorSpan.textContent = '';
         searchBox.value = '';
-    } else if (searchBox.value.length === 0) {
+        messageBox.value = '';
+    } else if (formData.userName.length === 0) {
         searchErrorSpan.textContent = 'Please enter a name to search';
         searchErrorSpan.className = 'members__search-error--active';
         successMessageSpan.textContent = '';
-        successMessageSpan.classNamee = 'members__success-message';
-    } else {
-        searchBox.value = '';
-        searchErrorSpan.textContent = '';
+        successMessageSpan.className = 'members__success-message';
+    } else if (formData.userName.length > 0) {
         searchErrorSpan.className = 'members__search-error';
-    }
-    if (messageBox.value.length === 0) {
+        searchErrorSpan.textContent = '';
+    } 
+    
+
+    if (formData.message.length === 0) {
         textAreaErrorSpan.textContent = 'Please enter a message';
         textAreaErrorSpan.className = 'members__text-error--active';
-    } else {
-        messageBox.value = '';
-        textAreaErrorSpan.textContent = '';
+        successMessageSpan.textContent = '';
+        successMessageSpan.className = 'members__success-message';
+    } else if (formData.message.length > 0) {
         textAreaErrorSpan.className = 'members__text-error';
+        textAreaErrorSpan.textContent = '';
     }
 
     event.preventDefault();

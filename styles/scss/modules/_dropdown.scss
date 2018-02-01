@@ -31,10 +31,9 @@
     @include e('item') {
         display: block;
         border-bottom: thin solid black;
-        @include mq('lg') {
-            padding: pem(5) 0;
-            font-size: pem(13);
-        }
+        padding: pem(5) 0;
+        font-size: pem(13);
+        
         &:last-child {
             border: none;
         }

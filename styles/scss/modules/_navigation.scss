@@ -7,17 +7,40 @@
         
         @include mq('sm') {
             display: flex;
-            justify-content: space-around;
+            margin: auto;
+            justify-content: space-between;
         }
     }
 
     @include e('item') {
         list-style: none;
+        display: flex;
+        position: relative;
         @include mq('sm') {
             margin: pem(16);
         }
         @include mq('lg') {
+            justify-content: space-between;
             margin: pem(32);
+        }
+    }
+
+    @include e('active-item') {
+        position: absolute;
+
+        @include mq('sm') {
+            border-top: pem(3) solid $de-york;
+            width: pem(30);
+            height: pem(40);
+            top: -15px;
+            right: -6px;
+        }
+
+        @include mq('lg') {
+            border-left: pem(3) solid $de-york;
+            width: pem(6);
+            height: pem(40);
+            left: -30px;
         }
     }
 
