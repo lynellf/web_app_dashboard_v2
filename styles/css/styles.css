@@ -139,9 +139,11 @@ a {
     right: -6px; }
     @media (min-width: 768px) {
       .nav__active-item {
+        border-top: none;
         border-left: 0.1875em solid #81C98F;
         width: 0.375em;
         height: 2.5em;
+        top: -5px;
         left: -30px; } }
   .nav__dashboard {
     width: auto;

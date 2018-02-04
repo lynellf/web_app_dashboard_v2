@@ -35,9 +35,11 @@
     right: -6px;
 
     @include mq('lg') {
+      border-top: none;
       border-left: pem(3) solid $de-york;
       width: pem(6);
       height: pem(40);
+      top: -5px;
       left: -30px;
     }
   }
