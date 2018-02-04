@@ -2,9 +2,9 @@
 // names that match the searh term
 
 var userElements = document.querySelectorAll('.members__name'),
-    searchBox = document.querySelector('.members__input'),
+    searchBox = document.querySelector('.message__input'),
     autocomplete = new autoComplete({
-        selector: '.members__input',
+        selector: '.message__input',
         minChars: 2,
         source: function(term, suggest) {
             term = term.toLowerCase();

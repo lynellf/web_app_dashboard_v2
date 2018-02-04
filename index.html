@@ -68,7 +68,6 @@
                     <span>Dashboard</span>
                 </div>
                 <div class="search__search">
-                    <img src="icons/icon-search.svg" alt="Search" class="icon--search">
                     <input type="text" class="search__searchbar" placeholder="search">
                 </div>
             </div>
@@ -237,22 +236,22 @@
                 </ul>
             </div>
             <!-- Step Five (f): Style to match the overall look and feel of the dashboard. -->
-            <div class="members__message">
+            <div class="message__container">
                 <h3 class="bottom__title">Message User</h3>
-                <span class="members__success-message" id="successMessage"></span>
-                <form class="members__form">
+                <span class="message__success-message" id="successMessage"></span>
+                <form class="message__form">
                     <!-- Step Five (a): Create a field for searching for a user -->
-                    <input type="text" class="members__input" placeholder="Search for User" />
+                    <input type="text" class="message__input" placeholder="Search for User" />
                     <!-- Step Five (e): Use JS to display error messages if a user isn't selected or the message field is empty -->
-                    <span class="members__search-error" id="searchError"></span>
+                    <span class="message__search-error" id="searchError"></span>
                     <!-- Step Five (c): Add a message textarea field which lets us add a message -->
-                    <textarea class="members__textarea" placeholder="Message for User"></textarea>
+                    <textarea class="message__textarea" placeholder="Message for User"></textarea>
                     <!-- Step Five (e): Use JS to display error messages if a user isn't selected or the message field is empty -->
-                    <span class="members__text-error" id="textError"></span>
+                    <span class="message__text-error" id="textError"></span>
                     <!-- Step Five (d): Create a "Send" button and use JS to allow you to submit the form and display
         a confirmation the message was sent. You won't actually submit the form, just simulate the action using
         JavaScript -->
-                    <input type="submit" class="members__submit" value="Send">
+                    <input type="submit" class="message__submit" value="Send">
                 </form>
             </div>
             <!-- Step Five -->

@@ -1,74 +1,55 @@
 .icon {
-    @include m('close') {
-        &:hover {
-            cursor: pointer;
-        }
-        &::after {
-            content: attr(id);
-            font-weight: 800;
-            color: white;
-        }
+  @include m('close') {
+    &:hover {
+      cursor: pointer;
+    }
+    &::after {
+      content: attr(id);
+      font-weight: 800;
+      color: white;
+    }
+  }
+
+  @include m('notifications') {
+    margin: pem(6) auto;
+    &:hover {
+      cursor: pointer;
     }
 
-    @include m('search') {
-        position: relative;
-        color: black;
-        height: 15px;
-        fill: black;
-        top: 15px;
-        left: 175px;
-        // Google Chrome
-        @supports (-webkit-appearance: none) {
-            top: 13px;
-            left: 200px;
-        }
-        // Microsoft Edge
-        @supports (-ms-ime-align: auto) {
-            top: 10px;
-            left: 185px;
-        }
+    width: auto;
+    height: pem(18);
+
+    @include mq('lg') {
+      width: auto;
+      height: pem(20);
+    }
+  }
+
+  @include m('new-notifications') {
+    margin: pem(6) auto;
+    &:hover {
+      cursor: pointer;
     }
 
-    @include m('notifications') {
-        margin: pem(6) auto;
-        &:hover {
-            cursor: pointer;
-        }
-        @include mq('sm') {
-            width: auto;
-            height: pem(18);
-        }
-        @include mq('lg') {
-            width: auto;
-            height: pem(20);
-        }
-    }
+    width: auto;
+    height: pem(18);
 
-    @include m('new-notifications') {
-        margin: pem(6) auto;
-        &:hover {
-            cursor: pointer;
-        }
-        @include mq('sm') {
-            width: auto;
-            height: pem(18);
-        }
-        @include mq('lg') {
-            width: auto;
-            height: pem(20);
-        }
+    @include mq('lg') {
+      width: auto;
+      height: pem(20);
     }
+  }
 }
 
 .notification {
-    position: relative;
-    @include e('signal') {
-        top: -10%;
-        right: -40%;
-        position: absolute;
-        fill: #77B988;
-        &:hover {
-            cursor: pointer;
-        }
+  position: relative;
+  @include e('signal') {
+    top: -10%;
+    right: -40%;
+    position: absolute;
+    fill: #77b988;
+    &:hover {
+      cursor: pointer;
     }
+  }
 }

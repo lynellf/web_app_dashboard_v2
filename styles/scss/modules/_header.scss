@@ -1,92 +1,84 @@
 .header {
-    background: $site-secondary;
-    color: $font-color-primary;
-    display: flex;
-    @include mq('sm') {
-        justify-content: space-between;
-    }
+  background: $site-secondary;
+  color: $font-color-primary;
+  display: flex;
+  justify-content: space-between;
+  @include mq('lg') {
+    justify-content: space-between;
+  }
+  @include e('title') {
+    margin-top: pem(16);
+    padding-left: pem(8);
+
     @include mq('lg') {
-        justify-content: space-between;
+      padding-left: pem(16);
     }
-    @include e('title') {
-        margin-top: pem(16);
-        padding-left: pem(8);
+  }
 
-        @include mq('lg') {
-            padding-left: pem(16);
-        }
+  @include e('titlea') {
+    font-size: pem(20);
+
+    @include mq('lg') {
+      font-size: pem(25);
     }
+  }
 
-    @include e('titlea') {
-        @include mq('sm') {
-            font-size: pem(20);
-        }
+  @include e('titleb') {
+    font-size: pem(20);
+    font-weight: 700;
 
-        @include mq('lg') {
-            font-size: pem(25);
-        }
+    @include mq('lg') {
+      font-size: pem(25);
+      font-weight: 700;
     }
+  }
 
-    @include e('titleb') {
-        @include mq('sm') {
-            font-size: pem(20);
-            font-weight: 700;
-        }
+  @include e('user') {
+    display: flex;
 
-        @include mq('lg') {
-            font-size: pem(25);
-            font-weight: 700;
-        }
+    margin: pem(14) pem(8);
+    font-size: pem(14);
+
+    @include mq('lg') {
+      margin: pem(14) pem(8);
+      font-size: pem(15);
     }
+  }
 
-    @include e('user') {
-        display: flex;
-        @include mq('sm') {
-            margin: pem(14) pem(8);
-            font-size: pem(14);
-        }
-
-        @include mq('lg') {
-            margin: pem(14) pem(8);
-            font-size: pem(15);
-        }
+  @include e('notification-div') {
+    display: flex;
+    @include mq('lg') {
+      border-right: pem(1) solid $site-primary;
+      padding-right: pem(16);
     }
+  }
 
-    @include e('notification-div') {
-        display: flex;
-        @include mq('lg') {
-            border-right: pem(1) solid $site-primary;
-            padding-right: pem(16);
-        }
+  @include e('user-info-div') {
+    display: flex;
+
+    justify-content: space-between;
+
+    @include mq('lg') {
+      padding-left: pem(16);
     }
+  }
 
-    @include e('user-info-div') {
-        display: flex;
-        @include mq('sm') {
-            justify-content: space-between;
-        }
-        @include mq('lg') {
-            padding-left: pem(16);
-        }
+  @include e('profile-img') {
+    border-radius: 50%;
+    margin: auto;
+
+    padding: 0 pem(8);
+    width: auto;
+    height: pem(25);
+
+    @include mq('lg') {
+      padding: 0 pem(8);
+      width: auto;
+      height: pem(30);
     }
+  }
 
-    @include e('profile-img') {
-        border-radius: 50%;
-        margin: auto;
-        @include mq('sm') {
-            padding: 0 pem(8);
-            width: auto;
-            height: pem(25);
-        }
-
-        @include mq('lg') {
-            padding: 0 pem(8);
-            width: auto;
-            height: pem(30);
-        }
-    }
-
-    @include e('name') {
-        margin: auto;
-    }
+  @include e('name') {
+    margin: auto;
+  }
 }

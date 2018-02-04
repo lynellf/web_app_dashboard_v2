@@ -1,49 +1,43 @@
 .dashboard {
-    @include mq('sm') {
-        display: flex;
-        flex-direction: column;
-    }
-    @include mq('lg') {
-        display: grid;
-        margin: 0;
-        min-height: 100vh;
-        grid-template-areas : "header header header" "nav main main";
-        grid-template-rows: 60px 1fr;
-        grid-template-columns: 100px 1fr 1fr;
-    }
+  display: flex;
+  flex-direction: column;
+  @include mq('lg') {
+    display: grid;
+    margin: 0;
+    min-height: 100vh;
+    grid-template-areas: 'header header header' 'nav main main';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 100px 1fr 1fr;
+  }
 }
 
 .header {
-    grid-area: header;
+  grid-area: header;
 }
 
 .nav {
-    grid-area: nav;
+  grid-area: nav;
 }
 
 .main {
-    @include mq('sm') {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    @include mq('lg') {
-        grid-area: main;
-        display: grid;
-        grid-template-areas: "search" "traffic" "social" "bottom";
-    }
+  display: flex;
+  flex-direction: column;
+
+  @include mq('lg') {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 'search' 'traffic' 'social' 'bottom';
+  }
 }
 
 .bottom {
-    // overflow x is being caused here
-    @include mq('sm') {
-        display: flex;
-        flex-direction: column;
-    }
+  // overflow x is being caused here
+  display: flex;
+  flex-direction: column;
 
-    @include mq('lg') {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "new recent" "message settings";
-    }
+  @include mq('lg') {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'new recent' 'message settings';
+  }
 }

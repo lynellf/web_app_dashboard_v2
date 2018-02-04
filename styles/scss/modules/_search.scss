@@ -1,67 +1,65 @@
 .search {
-    grid-area: search;
-    @include e('header') {
-        display: flex;
-        justify-content: space-between;
-        background: $link-water;
-        @include mq('sm') {
-            margin-bottom: pem(8);
-        }
+  grid-area: search;
+  @include e('header') {
+    display: flex;
+    justify-content: space-between;
+    background: $alabaster;
+    @include mq('sm') {
+      margin-bottom: pem(8);
+    }
+  }
+
+  @include e('title') {
+    background: white;
+    border-right: thin solid $site-primary;
+    padding: pem(16);
+    @include mq('lg') {
+      padding: pem(25);
+      font-size: pem(18);
+    }
+  }
+
+  @include e('search') {
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+    border-bottom: pem(1) solid $site-primary;
+
+    @include mq('lg') {
+      width: 95%;
+      padding: pem(16);
+      border-bottom: pem(1) solid $site-primary;
+    }
+  }
+
+  @include e('searchbar') {
+    padding: pem(8);
+    border-left: pem(1) solid $site-primary;
+    background: url('../../icons/icon-search.svg') no-repeat right;
+    background-size: pem(18) auto;
+    background-origin: content-box,
+    padding-box;
+    border: thin solid $silver-chalice;
+    border-radius: pem(6);
+    width: 40%;
+  }
+
+  @include e('alert') {
+    display: flex;
+    justify-content: space-between;
+    background: $site-secondary;
+    color: $font-color-primary;
+    border-radius: pem(6);
+    font-size: pem(13);
+    padding: pem(8);
+
+    @include mq('lg') {
+      margin: pem(16);
+      padding: pem(16);
     }
 
-    @include e('title') {
-        background: white;
-        // padding: pem(16) pem(6) pem(16) pem(10);
-
-        @include mq('sm') {
-            border-right: thin solid $site-primary;
-        }
-        @include mq('lg') {
-            padding: pem(25);
-            font-size: pem(18);
-        }
+    span {
+      margin: 0 pem(8);
     }
-
-    @include e('search') {
-        display: flex;
-        justify-content: flex-end;
-        @include mq('sm') {
-            width: 95%;
-            border-bottom: pem(1) solid $site-primary;
-        }
-        @include mq('lg') {
-            width: 95%;
-            padding: pem(16);
-            border-bottom: pem(1) solid $site-primary;
-            border-left: pem(1) solid $site-primary;
-        }
-    }
-
-    @include e('searchbar') {
-        padding: pem(6);
-        @include mq('sm') {
-            border-left: pem(1) solid $site-primary;
-        }
-    }
-
-    @include e('alert') {
-        display: flex;
-        justify-content: space-between;
-        background: $site-secondary;
-        color: $font-color-primary;
-        border-radius: pem(6);
-        @include mq('sm') {
-            font-size: pem(13);
-            padding: pem(8);
-        }
-        @include mq('lg') {
-            margin: pem(16);
-            padding: pem(16);
-        }
-        
-
-        span {
-            margin: 0 pem(8);
-        }
-    }
+  }
 }

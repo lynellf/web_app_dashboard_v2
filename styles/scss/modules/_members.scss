@@ -1,202 +1,70 @@
 .members {
-    @include e('new') {
-        @include mq('sm') {
-            border-bottom: thin solid $ship-cove;
-        }
-        @include mq('lg') {
-            border-top: thin solid $ship-cove;
-            border-bottom: thin solid $ship-cove;
-            border-right: thin solid $ship-cove;
-            grid-area: new;
-        }
-    }
-    @include e('recent') {
-        @include mq('sm') {
-            border-bottom: thin solid $ship-cove;
-        }
-        @include mq('lg') {
-            border-top: thin solid $ship-cove;
-            border-bottom: thin solid $ship-cove;
-            grid-area: recent;
-        }
-    }
-    @include e('message') {
-        display: flex;
-        flex-direction: column;
-        @include mq('sm') {
-            border-bottom: thin solid $ship-cove;
-        }
-        @include mq('lg') {
-            grid-area: message;
-            padding: pem(16);
-        }
-        
-    }
-    @include e('list') {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 0;
-    }
-    @include e('item') {
-        align-self: center;
-        width: 95%;
-        display: flex;
-        margin-bottom: pem(16);
-        padding-bottom: pem(8);
-        border-bottom: thin solid $site-secondary;
-        @include mq('sm') {
-            font-size: pem(12);
-        }
+  @include e('new') {
+    border-bottom: thin solid $ship-cove;
 
-        @include mq('lg') {
-            font-size: pem(16);
-        }
-        &:last-child {
-            border: none;
-        }
+    @include mq('lg') {
+      border-top: thin solid $ship-cove;
+      border-bottom: thin solid $ship-cove;
+      border-right: thin solid $ship-cove;
+      grid-area: new;
     }
-    @include e('container') {
-        display: flex;
-    }
-    @include e('details') {
-        display: flex;
-        flex-direction: column;
-        width: 75%;
-    }
-    @include e('update') {
-        display: flex;
-        flex-direction: column;
-    }
-    @include e('avy') {
-        border-radius: 50%;
-        @include mq('sm') {
-            width: auto;
-            height: pem(45);
-            margin-right: pem(8);
-        }
-        @include mq('lg') {
-            margin-right: pem(8);
-        }
-    }
-    @include e('date') {
-        align-self: flex-end;
-    }
+  }
+  @include e('recent') {
+    border-bottom: thin solid $ship-cove;
 
-    @include e('form') {
-        display: flex;
-        flex-direction: column;
+    @include mq('lg') {
+      border-top: thin solid $ship-cove;
+      border-bottom: thin solid $ship-cove;
+      grid-area: recent;
     }
+  }
+  @include e('list') {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+  @include e('item') {
+    align-self: center;
+    width: 95%;
+    display: flex;
+    margin-bottom: pem(16);
+    padding-bottom: pem(8);
+    border-bottom: thin solid $site-secondary;
+    font-size: pem(12);
+    @include mq('lg') {
+      font-size: pem(16);
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  @include e('container') {
+    display: flex;
+  }
+  @include e('details') {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+  }
+  @include e('update') {
+    display: flex;
+    flex-direction: column;
+  }
+  @include e('avy') {
+    border-radius: 50%;
 
-    @include e('input') {
-        border: thin solid $link-water;
-        border-radius: pem(6);
-        background: $alabaster;
-        margin: auto;
-        display: block;
-        width: 95%;
+    width: auto;
+    height: pem(45);
+    margin-right: pem(8);
 
-        @include mq('sm') {
-            padding: pem(8);
-            margin-bottom: pem(8);
-        }
-        @include mq('lg') {
-            padding: pem(8);
-            margin-bottom: pem(8);
-        }
+    @include mq('lg') {
+      margin-right: pem(8);
     }
-    @include e('textarea') {
-        border-radius: pem(6);
-        border: thin solid $link-water;
-        background: $alabaster;
-        display: block;
-        width: 95%;
-        @include mq('sm') {
-            align-self: center;
-            margin-top: pem(8);
-            min-height: pem(124);
-        }
-        @include mq('lg') {
-            margin: auto;
-            padding: pem(8);
-            min-height: pem(124);
-        }
-    }
-    @include e('submit') {
-        width: 95%;
-        border-radius: pem(6);
-        font-weight: 700;
-        color: $alabaster;
-        background: $site-primary;
-        border: none;
-        outline: none;
-        transition: all .1s ease-in-out;
+  }
+  @include e('date') {
+    align-self: flex-end;
+  }
 
-        @include mq('sm') {
-            align-self: center;
-            margin: pem(8) 0;
-            padding: pem(8);
-        }
-        @include mq('lg') {
-            align-self: center;
-            padding: pem(16);
-        }
-        &:active {
-            background: $site-secondary;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    @include e('message') {
-        display: flex;
-        flex-direction: column;
-        @include mq('lg') {
-            border-right: thin solid $ship-cove;
-        }
-    }
-    @include e('submit') {
-        display: block;
-        @include mq('lg') {
-            margin-top: pem(16);
-        }
-    }
-
-    @include e('success-message') {
-        @include m('active') {
-            border-radius: pem(6);
-            background: rgb(109, 185, 109);
-            color: $alabaster;
-            font-weight: 700;
-            align-self: center;
-            margin-bottom: pem(8);
-            padding: pem(8);
-        }
-    }
-
-    @include e('text-error') {
-        @include m('active') {
-            border-radius: pem(6);
-            background: rgb(212, 115, 115);
-            color: $alabaster;
-            font-weight: 700;
-            align-self: center;
-            padding: pem(8);
-            margin: pem(8) 0;
-        }
-    }
-
-    @include e('search-error') {
-        @include m('active') {
-            border-radius: pem(6);
-            background: rgb(212, 115, 115);
-            color: $alabaster;
-            font-weight: 700;
-            align-self: center;
-            padding: pem(8);
-            margin-bottom: pem(8);
-        }
-    }
-    
+  
 }

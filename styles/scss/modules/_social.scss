@@ -1,117 +1,114 @@
 .social {
-    grid-area: social;
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-top: pem(16);
+  border-bottom: thin solid $ship-cove;
+  padding-bottom: pem(44);
+
+  @include mq('lg') {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: pem(44);
+    border-bottom: none;
+  }
+
+  @include e('widgets') {
     display: flex;
+    justify-content: space-around;
+  }
+
+  @include e('site') {
+    width: 30%;
+    display: flex;
+    background: $link-water;
+    border: thin solid $ship-cove;
+    padding: pem(8);
     flex-direction: column;
-    height: auto;
-    padding-top: pem(16);
-    @include mq('sm') {
-        border-bottom: thin solid $ship-cove;
-        padding-bottom: pem(32);
-    }
+    align-items: center;
+
     @include mq('lg') {
-        margin-top: pem(-16);
-        margin-bottom: pem(44);
+      flex-direction: row;
+      padding: pem(20);
     }
-    
-    @include e('widgets') {
-        display: flex;
-        justify-content: space-around;
+  }
+
+  @include e('container') {
+    @include mq('lg') {
+      margin-left: pem(16);
     }
+    line-height: pem(8);
+  }
 
-    @include e('site') {
-        width: 30%;
-        display: flex;
-        background: $link-water;
-        border: thin solid $ship-cove;
-        @include mq('sm') {
-            padding: pem(8);
-            flex-direction: column;
-            align-items: center;
-        }
-        @include mq('lg') {
-            padding: pem(20);
-        }
+  @include e('header') {
+    display: none;
+
+    @include mq('lg') {
+      display: inherit;
+      margin-top: pem(15);
     }
+    color: $mulled-wine;
+  }
 
-    @include e('container') {
-        @include mq('lg') {
-            margin-left: pem(16);
-        }
-        line-height: pem(8);
+  @include e('counter') {
+    display: inline-block;
+    margin: pem(8) 0;
+    font-weight: 700;
+
+    @include mq('lg') {
+      font-weight: 100;
+      font-size: pem(35);
     }
+  }
 
-    @include e('header') {
-        @include mq('sm') {
-            display: none;
-        }
-        @include mq('lg') {
-            margin-top: pem(15);
-        }
-        color: $mulled-wine;
+  @include e('twitter') {
+    fill: white;
+    margin: auto;
+    margin-top: pem(2);
+    height: 30px;
+
+    @include mq('lg') {
+      margin-top: pem(2);
+      height: auto;
     }
+  }
 
-    @include e('counter') {
-        @include mq('sm') {
-            display: inline-block;
-            margin: pem(8) 0;
-            font-weight: 700;
-        }
-        @include mq('lg') {
-            font-weight: 100;
-            font-size: pem(35);
-        }
+  @include e('facebook') {
+    fill: white;
+    margin: pem(-3) 0;
+    height: 30px;
+
+    @include mq('lg') {
+      margin: pem(-3) 0;
+      height: auto;
     }
+  }
 
-    @include e('twitter') {
-        fill: white;
+  @include e('google') {
+    fill: white;
+    margin: pem(-2) 0;
+    margin-left: pem(2);
+    height: 30px;
 
-        @include mq('sm') {
-            margin: auto;
-            margin-top: pem(2);
-            height: 30px;
-        }
-        
-        @include mq('lg') {
-            margin-top: pem(2);
-        }
+    @include mq('lg') {
+      margin: pem(-2) 0;
+      margin-left: pem(2);
+      height: auto;
     }
+  }
 
-    @include e('facebook') {
-        fill: white;
-        @include mq('sm') {
-            margin: pem(-3) 0;
-            height: 30px;
-        }
+  @include e('span') {
+    display: block;
+    background: $mulled-wine;
+    border-radius: 50%;
+    height: 50px;
+    padding: pem(10);
 
-        @include mq('lg') {
-            margin: pem(-3) 0;
-        }
+    @include mq('lg') {
+      height: 75px;
+      padding: pem(20);
     }
-
-    @include e('google') {
-        fill: white;
-        @include mq('sm') {
-            margin: pem(-2) 0;
-            margin-left: pem(2);
-            height: 30px;
-        }
-        @include mq('lg') {
-            margin: pem(-2) 0;
-            margin-left: pem(2);
-        }
-    }
-
-    @include e('span') {
-        display: block;
-        background: $mulled-wine;
-        border-radius: 50%;
-        @include mq('sm') {
-            height: 50px;
-            padding: pem(10);
-        }
-        @include mq('lg') {
-            height: 75px;
-            padding: pem(20);
-        }
-    }
+  }
 }

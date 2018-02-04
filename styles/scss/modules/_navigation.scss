@@ -1,86 +1,84 @@
 .nav {
-    background: $site-primary;
-    color: $font-color-primary;
+  background: $site-primary;
+  color: $font-color-primary;
 
-    @include e('list') {
-        padding: 0;
-        
-        @include mq('sm') {
-            display: flex;
-            margin: auto;
-            justify-content: space-between;
-        }
+  @include e('list') {
+    padding: 0;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    @include mq('lg') {
+      flex-direction: column;
     }
+  }
 
-    @include e('item') {
-        list-style: none;
-        display: flex;
-        position: relative;
-        @include mq('sm') {
-            margin: pem(16);
-        }
-        @include mq('lg') {
-            justify-content: space-between;
-            margin: pem(32);
-        }
+  @include e('item') {
+    list-style: none;
+    display: flex;
+    position: relative;
+
+    margin: pem(16);
+
+    @include mq('lg') {
+      justify-content: space-between;
+      margin: pem(32);
     }
+  }
 
-    @include e('active-item') {
-        position: absolute;
+  @include e('active-item') {
+    position: absolute;
+    border-top: pem(3) solid $de-york;
+    width: pem(30);
+    height: pem(40);
+    top: -15px;
+    right: -6px;
 
-        @include mq('sm') {
-            border-top: pem(3) solid $de-york;
-            width: pem(30);
-            height: pem(40);
-            top: -15px;
-            right: -6px;
-        }
-
-        @include mq('lg') {
-            border-left: pem(3) solid $de-york;
-            width: pem(6);
-            height: pem(40);
-            left: -30px;
-        }
+    @include mq('lg') {
+      border-left: pem(3) solid $de-york;
+      width: pem(6);
+      height: pem(40);
+      left: -30px;
     }
+  }
 
-    @include e('dashboard') {
-        width: auto;
-        @include mq('sm') {
-            height: pem(20);
-        }
-        @include mq('lg') {
-            height: pem(35);
-        }
-    }
+  @include e('dashboard') {
+    width: auto;
 
-    @include e('members') {
-        width: auto;
-        @include mq('sm') {
-            height: pem(20);
-        }
-        @include mq('lg') {
-            height: pem(35);
-        }
-    }
+    height: pem(20);
 
-    @include e('visits') {
-        width: auto;
-        @include mq('sm') {
-            height: pem(20);
-        }
-        @include mq('lg') {
-            height: pem(35);
-        }
+    @include mq('lg') {
+      height: pem(35);
     }
+  }
 
-    @include e('settings') {
-        width: auto;
-        @include mq('sm') {
-            height: pem(20);
-        }
-        @include mq('lg') {
-            height: pem(35);
-        }
+  @include e('members') {
+    width: auto;
+
+    height: pem(20);
+
+    @include mq('lg') {
+      height: pem(35);
     }
+  }
+
+  @include e('visits') {
+    width: auto;
+
+    height: pem(20);
+
+    @include mq('lg') {
+      height: pem(35);
+    }
+  }
+
+  @include e('settings') {
+    width: auto;
+
+    height: pem(20);
+
+    @include mq('lg') {
+      height: pem(35);
+    }
+  }
 }

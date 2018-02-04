@@ -1,109 +1,110 @@
 .traffic {
-    border-bottom: thin solid $site-secondary;
-    @include mq('sm') {
-        display: flex;
-        flex-direction: column;
-    }
+  border-bottom: thin solid $site-secondary;
+  display: flex;
+  flex-direction: column;
+
+  @include mq('lg') {
+    grid-area: traffic;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'main main' 'daily mobile';
+  }
+
+  @include e('main') {
+    grid-area: main;
+    margin-bottom: pem(16);
     @include mq('lg') {
-        grid-area: traffic;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas : "main main" "daily mobile";
+        margin-bottom: 0;
     }
+  }
 
-    @include e('main') {
-        grid-area: main;
-        @include mq('sm') {
-            margin-bottom: pem(16);
-        }
-    }
-
-    @include e('menu') {
-        display: flex;
+  @include e('menu') {
+    display: flex;
+    flex-direction: column;
+    @include mq('lg') {
+        flex-direction: row;
         justify-content: space-between;
-        @include mq('sm') {
-            flex-direction: column;
-        }
     }
 
-    @include e('list') {
-        display: flex;
-        list-style: none;
-        padding-right: pem(8);
-        @include mq('sm') {
-            width: 80%;
-            align-self: center;
-            justify-content: space-around;
-            margin: pem(20) 0;
-        }
-        @include mq('lg') {
-            width: 40%;
-            align-self: center;
-            justify-content: space-around;
-            margin: pem(20) 0;
-        }
-        
+  }
+
+  @include e('list') {
+    display: flex;
+    list-style: none;
+    padding-right: pem(8);
+
+    width: 80%;
+    align-self: center;
+    justify-content: space-around;
+    margin: pem(20) 0;
+
+    @include mq('lg') {
+      width: 40%;
+      align-self: center;
+      justify-content: space-around;
+      margin: pem(20) 0;
+    }
+  }
+
+  @include e('title') {
+    margin: 0 0 pem(8) 0;
+  }
+
+  @include e('option') {
+    font-weight: 600;
+    padding: pem(8);
+    &:hover {
+      cursor: pointer;
     }
 
-    @include e('title') {
-        @include mq('sm') {
-            margin: 0 0 pem(8) 0;
-        }
+    @include m('active') {
+      font-weight: 600;
+      background: #77b988;
+      border-radius: 24px;
+      color: white;
+      padding: pem(8);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include e('daily') {
+    grid-area: daily;
+    border-bottom: thin solid $site-secondary;
+    padding: pem(16) 0;
+
+    @include mq('lg') {
+        border-bottom: none;
+    }
+  }
+  @include e('mobile') {
+    grid-area: mobile;
+
+    padding: pem(16) 0;
+
+    @include mq('lg') {
+      padding: 0 pem(20);
+      border-left: thin solid $site-secondary;
+    }
+  }
+
+  @include e('ranged') {
+    @include m('small') {
+      border-bottom: thin solid $site-secondary;
+      padding-bottom: pem(16);
+      @include mq('lg') {
+        display: none !important;
+      }
     }
 
-    @include e('option') {
-        font-weight: 600;
-        padding: pem(8);
-        &:hover {
-            cursor: pointer;
-        }
-
-        @include m('active') {
-            font-weight: 600;
-            background: #77B988;
-            border-radius: 24px;
-            color: white;
-            padding: pem(8);
-            &:hover {
-                cursor: pointer;
-            }
-            
-        }
+    @include m('large') {
+      border-bottom: thin solid $site-secondary;
+      padding-bottom: pem(16);
+      display: none !important;
+      @include mq('lg') {
+          display: block !important;
+      }
     }
-
-    @include e('daily') {
-        grid-area: daily;
-        @include mq('sm') {
-            border-bottom: thin solid $site-secondary;
-            padding: pem(16) 0;
-        }
-    }
-    @include e('mobile') {
-        grid-area: mobile;
-        @include mq('sm') {
-            padding: pem(16) 0;
-        }
-        @include mq('lg') {
-            padding: 0 pem(20);
-            border-left: thin solid $site-secondary;
-        }
-    }
-
-    @include e('ranged') {
-        @include m('small') {
-            border-bottom: thin solid $site-secondary;
-            padding-bottom: pem(16);
-            @include mq('lg') {
-                display: none !important;
-            }
-        }
-
-        @include m('large') {
-            border-bottom: thin solid $site-secondary;
-            padding-bottom: pem(16);
-            @include mq('sm') {
-                display: none !important;
-            }
-        }
-    }
+  }
 }
