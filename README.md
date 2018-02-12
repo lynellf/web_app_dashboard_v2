@@ -4,6 +4,8 @@ The Web App Dashboard is designed to match mock image. Furthermore, several page
 
 The alert icon displays notifications in a drop-down menu.  JavaScript-based form validation exists for messaging users. Additionally, form validation and user settings are JavaScript-based.
 
+[Veiw Live Project Here](https://ezellfrazier.com/projects/dashboard/)
+
 Project Overview
 
 --------------------
